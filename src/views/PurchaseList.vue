@@ -96,7 +96,8 @@
             class="flex-grow-1 ml-2 mr-2"
             @click="dialog3 = false"
           >
-            스캔
+            <v-icon class="mr-2">mdi-barcode-scan</v-icon>
+            <span>스캔</span>
           </v-btn>
           <v-btn
             rounded
@@ -107,7 +108,8 @@
             class="flex-grow-1 ml-2 mr-2"
             @click="dialog3 = false"
           >
-            확인
+            <v-icon>mdi-check</v-icon>
+            <span>확인</span>
           </v-btn>
         </v-card-actions>
       </v-card>
