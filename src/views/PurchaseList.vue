@@ -13,16 +13,16 @@
         </v-card-title>
       </v-card>
     </div>
-    <v-list>
-      <v-subheader dark class="listsubheader secondary">
-        <div class="v-list-item__action">No.</div>
+    <v-list class="pt-0">
+      <v-subheader dark class="secondary darken-1">
+        <div class="v-list-item__action mr-2">No.</div>
         <div class="v-list-item__content">매입사</div>
-        <div class="v-list-item__action">매입금액</div>
+        <div class="v-list-item__action ml-2">매입금액</div>
       </v-subheader>
       <v-list-item-group>
         <template v-for="(item, index) in items">
           <v-list-item :key="index">
-            <v-list-item-action class="text-h6">
+            <v-list-item-action class="text-h6 mr-2">
               <span>{{ index + 1 }}</span>
             </v-list-item-action>
             <v-list-item-content class="pt-2 pb-2">
@@ -36,7 +36,7 @@
                 {{ item.time }}
               </v-list-item-subtitle>
             </v-list-item-content>
-            <v-list-item-action>
+            <v-list-item-action class="ml-2">
               <v-list-item-title class="text-h6 font-weight-bold">
                 {{ item.money }}
                 <span class="font-weight-regular grey--text">
@@ -59,8 +59,7 @@
         class="flex-grow-1 ml-2 mr-2"
         @click="dialog3 = true"
       >
-        <v-icon class="mr-2">mdi-plus-circle-outline</v-icon>
-        <span>추가</span>
+        <span class="text-h6">추가</span>
       </v-btn>
       <v-btn
         rounded
@@ -69,8 +68,7 @@
         color="accent"
         class="flex-grow-1 ml-2 mr-2"
       >
-        <v-icon class="mr-2">mdi-email-send-outline</v-icon>
-        <span>전송</span>
+        <span class="text-h6">전송</span>
       </v-btn>
     </v-app-bar>
     <v-dialog v-model="dialog3" persistent max-width="500px">
@@ -106,8 +104,7 @@
             class="flex-grow-1 ml-2 mr-2"
             @click="dialog3 = false"
           >
-            <v-icon class="mr-2">mdi-barcode-scan</v-icon>
-            <span>스캔</span>
+            <span class="text-h6">스캔</span>
           </v-btn>
           <v-btn
             rounded
@@ -118,8 +115,7 @@
             class="flex-grow-1 ml-2 mr-2"
             @click="dialog3 = false"
           >
-            <v-icon class="mr-2">mdi-check</v-icon>
-            <span>확인</span>
+            <span class="text-h6">확인</span>
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -145,14 +141,14 @@ export default {
       {
         name: "서울우유",
         time: "오늘 11 : 31",
-        timecolor: "purple--text",
+        timecolor: "amber--text text--darken-3 text--darken-3",
         money: "5,715",
         ectmoney: ".00",
       },
       {
         name: "롯데칠성음료",
         time: "오늘 11 : 31",
-        timecolor: "purple--text",
+        timecolor: "amber--text text--darken-3",
         money: "2,166",
         ectmoney: ".65",
       },
@@ -166,14 +162,14 @@ export default {
       {
         name: "서울우유",
         time: "오늘 11 : 31",
-        timecolor: "purple--text",
+        timecolor: "amber--text text--darken-3",
         money: "5,715",
         ectmoney: ".00",
       },
       {
         name: "롯데칠성음료",
         time: "오늘 11 : 31",
-        timecolor: "purple--text",
+        timecolor: "amber--text text--darken-3",
         money: "2,166",
         ectmoney: ".65",
       },
