@@ -1,11 +1,11 @@
 <template>
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
-    <div class="pa-3">
-      <v-card class="secondary" dark elevation="0">
-        <v-card-title class="justify-end">
+    <div>
+      <v-card class="secondary" tile dark elevation="0">
+        <v-card-title class="pt-2 pb-2 justify-end">
           <span class="mr-auto">총</span>
-          <span class="text-h5 font-weight-bold">
+          <span class="text-h5 font-weight-bold primary--text">
             9,786
             <span class="font-weight-regular">.65</span>
           </span>
@@ -13,9 +13,8 @@
         </v-card-title>
       </v-card>
     </div>
-    <v-divider></v-divider>
     <v-list>
-      <v-subheader dark class="listsubheader">
+      <v-subheader dark class="listsubheader secondary">
         <div class="v-list-item__action">No.</div>
         <div class="v-list-item__content">매입사</div>
         <div class="v-list-item__action">매입금액</div>
@@ -23,17 +22,22 @@
       <v-list-item-group>
         <template v-for="(item, index) in items">
           <v-list-item :key="index">
-            <v-list-item-action>
+            <v-list-item-action class="text-h6">
               <span>{{ index + 1 }}</span>
             </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title>{{ item.name }}</v-list-item-title>
-              <v-list-item-subtitle class="mt-1" :class="item.timecolor">
+            <v-list-item-content class="pt-2 pb-2">
+              <v-list-item-title class="text-h6 mb-0">{{
+                item.name
+              }}</v-list-item-title>
+              <v-list-item-subtitle
+                class="mt-0 subtitle-1 mt-0"
+                :class="item.timecolor"
+              >
                 {{ item.time }}
               </v-list-item-subtitle>
             </v-list-item-content>
             <v-list-item-action>
-              <v-list-item-title class="font-weight-bold">
+              <v-list-item-title class="text-h6 font-weight-bold">
                 {{ item.money }}
                 <span class="font-weight-regular grey--text">
                   {{ item.ectmoney }}
@@ -196,8 +200,3 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-.listsubheader {
-  background: #424242;
-}
-</style>
