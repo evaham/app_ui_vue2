@@ -27,6 +27,11 @@ const routes = [
         component: () => import("@/views/PurchaseList.vue"),
       },
       {
+        path: "/purchaselistopt",
+        name: "PurchaseListOpt",
+        component: () => import("@/views/PurchaseListOpt.vue"),
+      },
+      {
         path: "/purchaseview",
         name: "PurchaseView",
         component: () => import("@/views/PurchaseView.vue"),

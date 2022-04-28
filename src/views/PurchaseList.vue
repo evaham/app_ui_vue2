@@ -2,7 +2,7 @@
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
     <div class="pa-3">
-      <v-card class="" dark elevation="0">
+      <v-card class="secondary" dark elevation="0">
         <v-card-title class="justify-end">
           <span class="mr-auto">총</span>
           <span class="text-h5 font-weight-bold">
@@ -13,7 +13,13 @@
         </v-card-title>
       </v-card>
     </div>
+    <v-divider></v-divider>
     <v-list>
+      <v-subheader dark class="listsubheader">
+        <div class="v-list-item__action">No.</div>
+        <div class="v-list-item__content">매입사</div>
+        <div class="v-list-item__action">매입금액</div>
+      </v-subheader>
       <v-list-item-group>
         <template v-for="(item, index) in items">
           <v-list-item :key="index">
@@ -39,13 +45,13 @@
         </template>
       </v-list-item-group>
     </v-list>
-    <v-app-bar app bottom elevation="0" class="white">
+    <v-app-bar app bottom elevation="0" class="white" v-show="checkOpt">
       <v-btn
         rounded
         depressed
         large
         outlined
-        color="primary"
+        color="accent"
         class="flex-grow-1 ml-2 mr-2"
         @click="dialog3 = true"
       >
@@ -56,7 +62,7 @@
         rounded
         depressed
         large
-        color="primary"
+        color="accent"
         class="flex-grow-1 ml-2 mr-2"
       >
         <v-icon class="mr-2">mdi-email-send-outline</v-icon>
@@ -82,17 +88,17 @@
             clearable
             type="text"
             @click:clear="clearMessage"
-            background-color="purple lighten-5"
+            background-color="yellow lighten-5"
             class="mt-3"
           ></v-text-field>
-          <div class="text-h6" style="min-height: 100px">상품리스트</div>
+          <div class="" style="min-height: 100px">상품리스트</div>
         </v-card-text>
         <v-card-actions>
           <v-btn
             rounded
             depressed
             large
-            color="primary"
+            color="accent"
             class="flex-grow-1 ml-2 mr-2"
             @click="dialog3 = false"
           >
@@ -104,11 +110,11 @@
             depressed
             disabled
             large
-            color="primary"
+            color="accent"
             class="flex-grow-1 ml-2 mr-2"
             @click="dialog3 = false"
           >
-            <v-icon>mdi-check</v-icon>
+            <v-icon class="mr-2">mdi-check</v-icon>
             <span>확인</span>
           </v-btn>
         </v-card-actions>
@@ -122,12 +128,14 @@ export default {
   components: { HeaderNav },
   name: "PurchaseList",
   data: () => ({
+    checkOpt: true,
     dialog3: false,
     propsData: {
       pagetitle: "매입내역",
       pageBack: true,
       pageBtn: true,
       pageBtnName: "편집",
+      pageTo: "/purchaselistopt",
     },
     items: [
       {
@@ -161,6 +169,14 @@ export default {
     clearMessage() {
       this.message = "";
     },
+    upValueParent(e) {
+      this.checkOpt = e;
+    },
   },
 };
 </script>
+<style lang="scss">
+.listsubheader {
+  background: #424242;
+}
+</style>

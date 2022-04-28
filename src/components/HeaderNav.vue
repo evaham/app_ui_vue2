@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="purple" dense dark app elevation="0">
+  <v-app-bar color="primary" dense app elevation="0">
     <v-btn
       icon
       @click="goBack"
@@ -11,9 +11,13 @@
     <div class="text-h6 flex-grow-1 text-center">
       {{ propsData.pagetitle }}
     </div>
-    <v-btn text v-show="propsData.pageBtn" class="appbar__right">{{
-      propsData.pageBtnName
-    }}</v-btn>
+    <v-btn
+      text
+      v-show="propsData.pageBtn"
+      class="appbar__right"
+      :to="propsData.pageTo"
+      >{{ propsData.pageBtnName }}</v-btn
+    >
   </v-app-bar>
 </template>
 <script>
@@ -25,6 +29,7 @@ export default {
       pageBack: Boolean,
       pageBtn: Boolean,
       pageBtnName: String,
+      pageTo: String,
     },
   },
   methods: {

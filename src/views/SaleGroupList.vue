@@ -3,28 +3,26 @@
     <header-nav :propsData="this.propsData"></header-nav>
     <v-toolbar elevation="0">
       <div class="dateselecter">
-        <v-btn class="dateselecter__rbtn" dark elevation="0">
+        <v-btn class="dateselecter__rbtn secondary" dark elevation="0">
           <v-icon>mdi-chevron-left</v-icon>
         </v-btn>
         <input type="text" value="2022년 04월" class="text-center" />
-        <v-btn class="dateselecter__lbtn" dark elevation="0">
+        <v-btn class="dateselecter__lbtn secondary" dark elevation="0">
           <v-icon>mdi-chevron-right</v-icon>
         </v-btn>
       </div>
     </v-toolbar>
     <v-list>
-      <v-list-item-group class="grey darken-4" dark>
-        <v-list-item>
-          <v-list-item-action></v-list-item-action>
-          <v-list-item-content>그룹명</v-list-item-content>
-          <v-list-item-action>시작일 ~ 종료일</v-list-item-action>
-        </v-list-item>
-      </v-list-item-group>
+      <v-subheader dark class="listsubheader">
+        <div class="v-list-item__action">No.</div>
+        <div class="v-list-item__content">그룹명</div>
+        <div class="v-list-item__action">시작일 ~ 종료일</div>
+      </v-subheader>
       <v-list-item-group>
         <template v-for="(item, index) in items">
           <v-list-item :key="index">
             <v-list-item-action>
-              <span>{{ index + 1 }}</span>
+              <span><v-icon>mdi-checkbox-blank-circle</v-icon></span>
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title>{{ item.name }}</v-list-item-title>
@@ -102,21 +100,28 @@ export default {
 <style lang="scss">
 .dateselecter {
   display: flex;
-  flex: 1;
   input[type="text"] {
     display: flex;
     flex: 1;
+    width: 140px;
     border: 1px solid #333a;
   }
   &__rbtn {
+    min-width: 34px !important;
+    padding: 0 5px !important;
     border-right: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
   &__lbtn {
+    min-width: 34px !important;
+    padding: 0 5px !important;
     border-left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
+}
+.listsubheader {
+  background: #424242;
 }
 </style>

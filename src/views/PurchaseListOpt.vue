@@ -3,31 +3,29 @@
     <header-nav :propsData="this.propsData"></header-nav>
     <div class="pa-3">
       <v-card class="secondary" dark elevation="0">
-        <v-list dense class="transparent">
-          <v-list-item style="min-height: 30px">
-            <div class="mr-10" style="min-width: 70px">공급사</div>
-            <div>롯데칠성음료</div>
-          </v-list-item>
-          <v-list-item style="min-height: 30px">
-            <div class="mr-10" style="min-width: 70px">금액</div>
-            <div>12433.35원</div>
-          </v-list-item>
-          <v-list-item style="min-height: 30px">
-            <div class="mr-10" style="min-width: 70px">날짜</div>
-            <div class="accent-text">2022-04-21 11:31</div>
-          </v-list-item>
-        </v-list>
+        <v-card-title class="justify-end">
+          <span class="mr-auto">총</span>
+          <span class="text-h5 font-weight-bold">
+            9,786
+            <span class="font-weight-regular">.65</span>
+          </span>
+          <span class="ml-4">원</span>
+        </v-card-title>
       </v-card>
     </div>
+    <v-divider></v-divider>
     <v-list>
       <v-subheader dark class="listsubheader">
-        <div class="v-list-item__action">No.</div>
+        <div class="v-list-item__action"><v-checkbox></v-checkbox></div>
         <div class="v-list-item__content">매입사</div>
         <div class="v-list-item__action">매입금액</div>
       </v-subheader>
       <v-list-item-group>
         <template v-for="(item, index) in items">
           <v-list-item :key="index">
+            <v-list-item-action>
+              <span><v-checkbox></v-checkbox></span>
+            </v-list-item-action>
             <v-list-item-action>
               <span>{{ index + 1 }}</span>
             </v-list-item-action>
@@ -50,19 +48,21 @@
         </template>
       </v-list-item-group>
     </v-list>
+
     <v-app-bar app bottom elevation="0" class="white">
       <v-btn
         rounded
+        disabled
         depressed
         large
         color="accent"
         class="flex-grow-1 ml-2 mr-2"
-        @click="dialog3 = true"
       >
-        <v-icon class="mr-2">mdi-plus-circle-outline</v-icon>
-        <span>상품 추가</span>
+        <v-icon class="mr-2">mdi-trash-can-outline</v-icon>
+        <span>삭제</span>
       </v-btn>
     </v-app-bar>
+
     <v-dialog v-model="dialog3" persistent max-width="500px">
       <v-card>
         <v-card-title class="pa-2">
@@ -82,32 +82,34 @@
             clearable
             type="text"
             @click:clear="clearMessage"
-            background-color="purple lighten-5"
+            background-color="yellow lighten-5"
             class="mt-3"
           ></v-text-field>
-          <div class="text-h6" style="min-height: 100px">상품리스트</div>
+          <div class="" style="min-height: 100px">상품리스트</div>
         </v-card-text>
         <v-card-actions>
           <v-btn
             rounded
             depressed
             large
-            color="primary"
+            color="accent"
             class="flex-grow-1 ml-2 mr-2"
             @click="dialog3 = false"
           >
-            스캔
+            <v-icon class="mr-2">mdi-barcode-scan</v-icon>
+            <span>스캔</span>
           </v-btn>
           <v-btn
             rounded
             depressed
             disabled
             large
-            color="primary"
+            color="accent"
             class="flex-grow-1 ml-2 mr-2"
             @click="dialog3 = false"
           >
-            확인
+            <v-icon class="mr-2">mdi-check</v-icon>
+            <span>확인</span>
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -120,12 +122,14 @@ export default {
   components: { HeaderNav },
   name: "PurchaseList",
   data: () => ({
+    checkOpt: true,
     dialog3: false,
     propsData: {
-      pagetitle: "매입상세",
+      pagetitle: "매입내역",
       pageBack: true,
       pageBtn: true,
-      pageBtnName: "편집",
+      pageBtnName: "취소",
+      pageTo: "/purchaselist",
     },
     items: [
       {
