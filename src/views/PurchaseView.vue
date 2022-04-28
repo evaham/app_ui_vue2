@@ -129,7 +129,7 @@ export default {
     },
     items: [
       {
-        name: "서울우유",
+        name: "롯데이프로복숭아(2000ml)",
         time: "오늘 11 : 31",
         timecolor: "purple--text",
         money: "5,715",
@@ -141,6 +141,20 @@ export default {
         timecolor: "purple--text",
         money: "2,166",
         ectmoney: ".65",
+      },
+      {
+        name: "서울우유",
+        time: "2022-04-20 11 : 31",
+        timecolor: "grey--text",
+        money: "1,905",
+        ectmoney: ".00",
+      },
+      {
+        name: "서울우유",
+        time: "2022-04-20 11 : 31",
+        timecolor: "grey--text",
+        money: "1,905",
+        ectmoney: ".00",
       },
       {
         name: "서울우유",
