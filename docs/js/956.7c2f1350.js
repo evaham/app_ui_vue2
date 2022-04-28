@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkapp_ui_vue2"]=self["webpackChunkapp_ui_vue2"]||[]).push([[956],{4956:function(e,u,n){n.r(u),n.d(u,{default:function(){return i}});var t=function(){var e=this,u=e.$createElement,n=e._self._c||u;return n("router-view")},l=[],r={name:"DefaultLayout"},a=r,c=n(1001),f=(0,c.Z)(a,t,l,!1,null,null,null),i=f.exports}}]);
-//# sourceMappingURL=956.7c2f1350.js.map
