@@ -1,44 +1,62 @@
 <template>
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
-    <div class="pa-3">
+    <div class="pa-2">
       <v-card class="secondary" dark elevation="0">
         <v-list dense class="transparent">
           <v-list-item style="min-height: 30px">
             <div class="mr-10" style="min-width: 70px">공급사</div>
-            <div>롯데칠성음료</div>
+            <div class="text-h6">롯데칠성음료</div>
           </v-list-item>
           <v-list-item style="min-height: 30px">
             <div class="mr-10" style="min-width: 70px">금액</div>
-            <div>12433.35원</div>
+            <div class="text-h6">
+              <span class="primary--text">12433.35</span> 원
+            </div>
           </v-list-item>
           <v-list-item style="min-height: 30px">
             <div class="mr-10" style="min-width: 70px">날짜</div>
-            <div class="accent-text">2022-04-21 11:31</div>
+            <div class="text-h6">2022-04-21 11:31</div>
           </v-list-item>
         </v-list>
       </v-card>
     </div>
-    <v-list>
-      <v-subheader dark class="listsubheader">
-        <div class="v-list-item__action">No.</div>
-        <div class="v-list-item__content">매입사</div>
-        <div class="v-list-item__action">매입금액</div>
+    <v-list class="pt-0">
+      <v-subheader dark class="secondary" style="height: 34px">
+        <div class="v-list-item__action mr-2">No.</div>
+        <div class="v-list-item__content">상품명</div>
+        <div class="v-list-item__action ml-2 justify-end">수량</div>
+        <div class="v-list-item__action ml-2 justify-end" style="width: 100px">
+          매입금액
+        </div>
       </v-subheader>
       <v-list-item-group>
         <template v-for="(item, index) in items">
           <v-list-item :key="index">
-            <v-list-item-action>
+            <v-list-item-action class="text-h6 mr-2">
               <span>{{ index + 1 }}</span>
             </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title>{{ item.name }}</v-list-item-title>
-              <v-list-item-subtitle class="mt-1" :class="item.timecolor">
+            <v-list-item-content class="pt-2 pb-2">
+              <v-list-item-title class="text-h6 mb-0">{{
+                item.name
+              }}</v-list-item-title>
+              <v-list-item-subtitle
+                class="mt-0 subtitle-1 mt-0"
+                :class="item.timecolor"
+              >
                 {{ item.time }}
               </v-list-item-subtitle>
             </v-list-item-content>
-            <v-list-item-action>
-              <v-list-item-title class="font-weight-bold">
+            <v-list-item-action class="ml-2 text-right">
+              <v-list-item-title class="text-h6 font-weight-bold">
+                {{ item.quantity }}
+                <span class="font-weight-regular grey--text">
+                  {{ item.ectmoney }}
+                </span>
+              </v-list-item-title>
+            </v-list-item-action>
+            <v-list-item-action class="ml-2 text-right" style="width: 100px">
+              <v-list-item-title class="text-h6 font-weight-bold">
                 {{ item.money }}
                 <span class="font-weight-regular grey--text">
                   {{ item.ectmoney }}
@@ -54,63 +72,15 @@
       <v-btn
         rounded
         depressed
-        large
         color="accent"
         class="flex-grow-1 ml-2 mr-2"
         @click="dialog3 = true"
       >
-        <v-icon class="mr-2">mdi-plus-circle-outline</v-icon>
-        <span>상품 추가</span>
+        <span class="text-h6">상품 추가</span>
       </v-btn>
     </v-app-bar>
-    <v-dialog v-model="dialog3" persistent max-width="500px">
-      <v-card>
-        <v-card-title class="pa-2">
-          <v-spacer></v-spacer>
-          <span>공급사</span>
-          <v-spacer></v-spacer>
-          <v-btn icon @click="dialog3 = false">
-            <v-icon large>mdi-close</v-icon>
-          </v-btn>
-        </v-card-title>
-        <v-divider></v-divider>
-        <v-card-text>
-          <v-text-field
-            v-model="message"
-            filled
-            clear-icon="mdi-close-circle"
-            clearable
-            type="text"
-            @click:clear="clearMessage"
-            background-color="purple lighten-5"
-            class="mt-3"
-          ></v-text-field>
-          <div class="text-h6" style="min-height: 100px">상품리스트</div>
-        </v-card-text>
-        <v-card-actions>
-          <v-btn
-            rounded
-            depressed
-            large
-            color="primary"
-            class="flex-grow-1 ml-2 mr-2"
-            @click="dialog3 = false"
-          >
-            스캔
-          </v-btn>
-          <v-btn
-            rounded
-            depressed
-            disabled
-            large
-            color="primary"
-            class="flex-grow-1 ml-2 mr-2"
-            @click="dialog3 = false"
-          >
-            확인
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+    <v-dialog v-model="dialog3" max-width="500px">
+      <v-card>샘플</v-card>
     </v-dialog>
   </v-main>
 </template>
@@ -130,38 +100,31 @@ export default {
     items: [
       {
         name: "롯데이프로복숭아(2000ml)",
-        time: "오늘 11 : 31",
-        timecolor: "purple--text",
-        money: "5,715",
-        ectmoney: ".00",
+        time: "8801056002701",
+        timecolor: "amber--text text--darken-4",
+        money: "1,115,715",
+        quantity: "999",
       },
       {
-        name: "롯데칠성음료",
-        time: "오늘 11 : 31",
-        timecolor: "purple--text",
+        name: "롯데칸타타아메리카",
+        time: "8801056018900",
+        timecolor: "amber--text text--darken-4",
         money: "2,166",
-        ectmoney: ".65",
+        quantity: "3",
       },
       {
-        name: "서울우유",
-        time: "2022-04-20 11 : 31",
-        timecolor: "grey--text",
+        name: "롯데핫식스캔(240ml)",
+        time: "8801056038861",
+        timecolor: "amber--text text--darken-4",
         money: "1,905",
-        ectmoney: ".00",
+        quantity: "10",
       },
       {
-        name: "서울우유",
-        time: "2022-04-20 11 : 31",
-        timecolor: "grey--text",
-        money: "1,905",
-        ectmoney: ".00",
-      },
-      {
-        name: "서울우유",
-        time: "2022-04-20 11 : 31",
-        timecolor: "grey--text",
-        money: "1,905",
-        ectmoney: ".00",
+        name: "롯데핫식스캔데핫식스캔데핫식스캔(240ml)",
+        time: "8801056038861",
+        timecolor: "amber--text text--darken-4",
+        money: "190",
+        quantity: "10",
       },
     ],
     password: "Password",
@@ -176,8 +139,3 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-.listsubheader {
-  background: #424242;
-}
-</style>

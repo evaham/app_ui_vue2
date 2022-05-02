@@ -1,20 +1,20 @@
 <template>
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
-    <div>
-      <v-card class="secondary" tile dark elevation="0">
-        <v-card-title class="pt-2 pb-2 justify-end">
-          <span class="mr-auto">총</span>
-          <span class="text-h5 font-weight-bold primary--text">
+    <div class="pa-2">
+      <v-card class="secondary" elevation="0">
+        <v-card-title class="pt-1 pb-1 justify-end white--text">
+          <span class="mr-auto text-body-1">총</span>
+          <span class="primary--text text-h5 font-weight-bold">
             9,786
             <span class="font-weight-regular">.65</span>
           </span>
-          <span class="ml-4">원</span>
+          <span class="ml-4 text-body-1">원</span>
         </v-card-title>
       </v-card>
     </div>
     <v-list class="pt-0">
-      <v-subheader dark class="secondary darken-1">
+      <v-subheader dark class="secondary" style="height: 34px">
         <div class="v-list-item__action mr-2">No.</div>
         <div class="v-list-item__content">매입사</div>
         <div class="v-list-item__action ml-2">매입금액</div>
@@ -53,7 +53,6 @@
       <v-btn
         rounded
         depressed
-        large
         outlined
         color="accent"
         class="flex-grow-1 ml-2 mr-2"
@@ -61,14 +60,8 @@
       >
         <span class="text-h6">추가</span>
       </v-btn>
-      <v-btn
-        rounded
-        depressed
-        large
-        color="accent"
-        class="flex-grow-1 ml-2 mr-2"
-      >
-        <span class="text-h6">전송</span>
+      <v-btn rounded depressed color="accent" class="flex-grow-1 ml-2 mr-2">
+        <span class="text-h6 text--grey">전송</span>
       </v-btn>
     </v-app-bar>
     <v-dialog v-model="dialog3" persistent max-width="500px">
@@ -99,7 +92,6 @@
           <v-btn
             rounded
             depressed
-            large
             color="accent"
             class="flex-grow-1 ml-2 mr-2"
             @click="dialog3 = false"
@@ -110,7 +102,6 @@
             rounded
             depressed
             disabled
-            large
             color="accent"
             class="flex-grow-1 ml-2 mr-2"
             @click="dialog3 = false"
