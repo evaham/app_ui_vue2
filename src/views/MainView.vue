@@ -1,7 +1,10 @@
 <template>
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
-    <v-list>
+    <v-list dark>
+      <v-list-item>
+        <router-link to="/loading">로딩화면</router-link>
+      </v-list-item>
       <v-list-item>
         <router-link to="/purchaselist">매입내역</router-link>
       </v-list-item>
