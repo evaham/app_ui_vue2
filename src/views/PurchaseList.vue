@@ -3,9 +3,9 @@
     <header-nav :propsData="this.propsData"></header-nav>
     <div class="pa-1">
       <v-card class="secondary" elevation="0">
-        <v-card-title class="pt-1 pb-1 justify-end white--text">
+        <v-card-title class="pt-1 pb-1 justify-end primary--text">
           <span class="mr-auto text-body-1">총</span>
-          <span class="primary--text text-h5 font-weight-bold">
+          <span class="text-h5 font-weight-bold">
             9,786
             <span class="font-weight-regular">.65</span>
           </span>
@@ -30,7 +30,7 @@
                 item.name
               }}</v-list-item-title>
               <v-list-item-subtitle
-                class="mt-0 subtitle-1 mt-0"
+                class="mt-0 text-subtitle-1 mt-0"
                 :class="item.timecolor"
               >
                 {{ item.time }}
@@ -54,45 +54,55 @@
         rounded
         depressed
         outlined
-        color="accent"
+        color="secondary"
         class="flex-grow-1 ml-2 mr-2"
         @click="dialog3 = true"
       >
         <span class="text-h6">추가</span>
       </v-btn>
-      <v-btn rounded depressed color="accent" class="flex-grow-1 ml-2 mr-2">
+      <v-btn
+        rounded
+        depressed
+        color="primary darken-1 black--text"
+        class="flex-grow-1 ml-2 mr-2"
+      >
         <span class="text-h6 text--grey">전송</span>
       </v-btn>
     </v-app-bar>
     <v-dialog v-model="dialog3" persistent max-width="500px">
       <v-card>
         <v-card-title class="pa-2">
-          <v-spacer></v-spacer>
-          <span>공급사</span>
-          <v-spacer></v-spacer>
-          <v-btn icon @click="dialog3 = false">
+          <span class="flex-grow-1 text-center">공급사</span>
+          <v-btn
+            icon
+            @click="dialog3 = false"
+            style="position: absolute; right: 6px"
+          >
             <v-icon large>mdi-close</v-icon>
           </v-btn>
         </v-card-title>
         <v-divider></v-divider>
         <v-card-text>
           <v-text-field
+            dense
             v-model="message"
             filled
             clear-icon="mdi-close-circle"
             clearable
             type="text"
             @click:clear="clearMessage"
-            background-color="yellow lighten-5"
             class="mt-3"
           ></v-text-field>
-          <div class="" style="min-height: 100px">상품리스트</div>
+          <div class="text-subtitle-1" style="min-height: 100px">
+            공급사명1 리스트<br />
+            공급사명2 리스트
+          </div>
         </v-card-text>
         <v-card-actions>
           <v-btn
             rounded
             depressed
-            color="accent"
+            color="primary darken-1 black--text"
             class="flex-grow-1 ml-2 mr-2"
             @click="dialog3 = false"
           >
@@ -102,7 +112,7 @@
             rounded
             depressed
             disabled
-            color="accent"
+            color="primary darken-1 black--text"
             class="flex-grow-1 ml-2 mr-2"
             @click="dialog3 = false"
           >
@@ -132,14 +142,14 @@ export default {
       {
         name: "서울우유",
         time: "오늘 11 : 31",
-        timecolor: "amber--text text--darken-3 text--darken-3",
+        timecolor: "primary--text text--darken-4",
         money: "5,715",
         ectmoney: ".00",
       },
       {
         name: "롯데칠성음료",
         time: "오늘 11 : 31",
-        timecolor: "amber--text text--darken-3",
+        timecolor: "primary--text text--darken-4",
         money: "2,166",
         ectmoney: ".65",
       },
@@ -153,28 +163,28 @@ export default {
       {
         name: "서울우유",
         time: "오늘 11 : 31",
-        timecolor: "amber--text text--darken-3",
+        timecolor: "primary--text text--darken-4",
         money: "5,715",
         ectmoney: ".00",
       },
       {
         name: "롯데칠성음료",
         time: "오늘 11 : 31",
-        timecolor: "amber--text text--darken-3",
+        timecolor: "primary--text text--darken-4",
         money: "2,166",
         ectmoney: ".65",
       },
       {
-        name: "서울우유",
+        name: "서울우유서울우유서울우유",
         time: "2022-04-20 11 : 31",
         timecolor: "grey--text",
-        money: "1,905",
+        money: "211,905",
         ectmoney: ".00",
       },
     ],
     password: "Password",
     show: false,
-    message: "서울우유",
+    message: "공급사명",
     marker: true,
   }),
   methods: {

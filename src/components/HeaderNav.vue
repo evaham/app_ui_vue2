@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="primary" dense app elevation="0">
+  <v-app-bar color="primary darken-1" dense app elevation="0">
     <v-btn
       icon
       @click="goBack"

@@ -22,13 +22,9 @@
     <v-list class="pt-0">
       <v-subheader dark class="secondary" style="height: 34px">
         <div class="v-list-item__action mr-1">No.</div>
-        <div class="v-list-item__content">
-          <span
-            ><span>상품명/</span><span class="accent--text">바코드</span></span
-          >
-        </div>
+        <div class="v-list-item__content">상품명 / 바코드</div>
         <div class="v-list-item__action ml-2 justify-end" style="width: 100px">
-          <span class="accent--text">수량</span>/매입금액
+          수량 / 매입금액
         </div>
       </v-subheader>
       <v-list-item-group>
@@ -38,7 +34,7 @@
               <span>{{ index + 1 }}</span>
             </v-list-item-action>
             <v-list-item-content class="pt-2 pb-2">
-              <v-list-item-title class="text-h6 mb-0">{{
+              <v-list-item-title class="text-subtitle-1 mb-0">{{
                 item.name
               }}</v-list-item-title>
               <v-list-item-subtitle
@@ -49,9 +45,7 @@
               </v-list-item-subtitle>
             </v-list-item-content>
             <v-list-item-action class="ml-2" style="width: 100px">
-              <v-list-item-title
-                class="text-h6 mb-0 align-self-end accent--text"
-              >
+              <v-list-item-title class="text-h6 mb-0 align-self-end">
                 {{ item.quantity }}
               </v-list-item-title>
               <v-list-item-subtitle class="text-subtitle-1">
@@ -67,7 +61,7 @@
       <v-btn
         rounded
         depressed
-        color="accent"
+        color="primary darken-1 black--text"
         class="flex-grow-1 ml-2 mr-2"
         @click="dialog3 = true"
       >
@@ -96,28 +90,28 @@ export default {
       {
         name: "롯데이프로복숭아(2000ml)",
         time: "8801056002701",
-        timecolor: "accent--text",
+        timecolor: "primary--text text--darken-4",
         money: "1,115,715.00",
         quantity: "999",
       },
       {
         name: "롯데칸타타아메리카",
         time: "8801056018900",
-        timecolor: "accent--text",
+        timecolor: "primary--text text--darken-4",
         money: "2,166.00",
         quantity: "3",
       },
       {
         name: "롯데핫식스캔(240ml)",
         time: "8801056038861",
-        timecolor: "accent--text",
+        timecolor: "primary--text text--darken-4",
         money: "1,905.00",
         quantity: "10",
       },
       {
         name: "롯데핫식스캔데핫식스캔데핫식스캔(240ml)",
         time: "8801056038861",
-        timecolor: "accent--text",
+        timecolor: "primary--text text--darken-4",
         money: "190.00",
         quantity: "10",
       },
