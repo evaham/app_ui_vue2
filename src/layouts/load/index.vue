@@ -16,8 +16,8 @@ export default {
 <style lang="scss" scoped>
 .imgbox {
   display: flex;
-  width: 260px;
-  height: 260px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background: #fff;
 }
@@ -25,7 +25,7 @@ export default {
   display: flex;
   flex: 1;
   margin: 0 50px;
-  height: 80px;
+  height: 40px;
   background: #fff;
 }
 </style>

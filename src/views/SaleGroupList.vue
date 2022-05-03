@@ -14,14 +14,14 @@
     </v-toolbar>
     <v-list class="pt-0">
       <v-subheader dark class="secondary" style="height: 34px">
-        <div class="v-list-item__action mr-2"></div>
+        <div class="v-list-item__action mr-1"></div>
         <div class="v-list-item__content">그룹명</div>
         <div class="v-list-item__action justify-end">시작일 ~ 종료일</div>
       </v-subheader>
       <v-list-item-group>
         <template v-for="(item, index) in items">
           <v-list-item :key="index">
-            <v-list-item-action class="mr-2">
+            <v-list-item-action class="mr-1">
               <span><v-icon>mdi-checkbox-blank-circle</v-icon></span>
             </v-list-item-action>
             <v-list-item-content>

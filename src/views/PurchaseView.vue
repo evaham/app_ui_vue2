@@ -1,39 +1,40 @@
 <template>
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
-    <div class="pa-2">
+    <div class="pa-1">
       <v-card class="secondary" dark elevation="0">
         <v-list dense class="transparent">
-          <v-list-item style="min-height: 30px">
-            <div class="mr-10" style="min-width: 70px">공급사</div>
-            <div class="text-h6">롯데칠성음료</div>
+          <v-list-item style="min-height: 24px">
+            <div class="mr-10" style="min-width: 50px">공급사</div>
+            <div>롯데칠성음료</div>
           </v-list-item>
-          <v-list-item style="min-height: 30px">
-            <div class="mr-10" style="min-width: 70px">금액</div>
-            <div class="text-h6">
-              <span class="primary--text">12433.35</span> 원
-            </div>
+          <v-list-item style="min-height: 24px">
+            <div class="mr-10" style="min-width: 50px">금액</div>
+            <div class=""><span class="primary--text">12433.35</span> 원</div>
           </v-list-item>
-          <v-list-item style="min-height: 30px">
-            <div class="mr-10" style="min-width: 70px">날짜</div>
-            <div class="text-h6">2022-04-21 11:31</div>
+          <v-list-item style="min-height: 24px">
+            <div class="mr-10" style="min-width: 50px">날짜</div>
+            <div class="">2022-04-21 11:31</div>
           </v-list-item>
         </v-list>
       </v-card>
     </div>
     <v-list class="pt-0">
       <v-subheader dark class="secondary" style="height: 34px">
-        <div class="v-list-item__action mr-2">No.</div>
-        <div class="v-list-item__content">상품명</div>
-        <div class="v-list-item__action ml-2 justify-end">수량</div>
+        <div class="v-list-item__action mr-1">No.</div>
+        <div class="v-list-item__content">
+          <span
+            ><span>상품명/</span><span class="accent--text">바코드</span></span
+          >
+        </div>
         <div class="v-list-item__action ml-2 justify-end" style="width: 100px">
-          매입금액
+          <span class="accent--text">수량</span>/매입금액
         </div>
       </v-subheader>
       <v-list-item-group>
         <template v-for="(item, index) in items">
           <v-list-item :key="index">
-            <v-list-item-action class="text-h6 mr-2">
+            <v-list-item-action class="text-h6 mr-1">
               <span>{{ index + 1 }}</span>
             </v-list-item-action>
             <v-list-item-content class="pt-2 pb-2">
@@ -41,27 +42,21 @@
                 item.name
               }}</v-list-item-title>
               <v-list-item-subtitle
-                class="mt-0 subtitle-1 mt-0"
+                class="mt-0 text-subtitle-1 mt-0"
                 :class="item.timecolor"
               >
                 {{ item.time }}
               </v-list-item-subtitle>
             </v-list-item-content>
-            <v-list-item-action class="ml-2 text-right">
-              <v-list-item-title class="text-h6 font-weight-bold">
+            <v-list-item-action class="ml-2" style="width: 100px">
+              <v-list-item-title
+                class="text-h6 mb-0 align-self-end accent--text"
+              >
                 {{ item.quantity }}
-                <span class="font-weight-regular grey--text">
-                  {{ item.ectmoney }}
-                </span>
               </v-list-item-title>
-            </v-list-item-action>
-            <v-list-item-action class="ml-2 text-right" style="width: 100px">
-              <v-list-item-title class="text-h6 font-weight-bold">
+              <v-list-item-subtitle class="text-subtitle-1">
                 {{ item.money }}
-                <span class="font-weight-regular grey--text">
-                  {{ item.ectmoney }}
-                </span>
-              </v-list-item-title>
+              </v-list-item-subtitle>
             </v-list-item-action>
           </v-list-item>
           <v-divider v-if="index < items.length" :key="index"></v-divider>
@@ -101,29 +96,29 @@ export default {
       {
         name: "롯데이프로복숭아(2000ml)",
         time: "8801056002701",
-        timecolor: "amber--text text--darken-4",
-        money: "1,115,715",
+        timecolor: "accent--text",
+        money: "1,115,715.00",
         quantity: "999",
       },
       {
         name: "롯데칸타타아메리카",
         time: "8801056018900",
-        timecolor: "amber--text text--darken-4",
-        money: "2,166",
+        timecolor: "accent--text",
+        money: "2,166.00",
         quantity: "3",
       },
       {
         name: "롯데핫식스캔(240ml)",
         time: "8801056038861",
-        timecolor: "amber--text text--darken-4",
-        money: "1,905",
+        timecolor: "accent--text",
+        money: "1,905.00",
         quantity: "10",
       },
       {
         name: "롯데핫식스캔데핫식스캔데핫식스캔(240ml)",
         time: "8801056038861",
-        timecolor: "amber--text text--darken-4",
-        money: "190",
+        timecolor: "accent--text",
+        money: "190.00",
         quantity: "10",
       },
     ],

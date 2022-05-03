@@ -1,7 +1,7 @@
 <template>
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
-    <div class="pa-2">
+    <div class="pa-1">
       <v-card class="secondary" elevation="0">
         <v-card-title class="pt-1 pb-1 justify-end white--text">
           <span class="mr-auto text-body-1">총</span>
@@ -15,14 +15,14 @@
     </div>
     <v-list class="pt-0">
       <v-subheader dark class="secondary" style="height: 34px">
-        <div class="v-list-item__action mr-2">No.</div>
+        <div class="v-list-item__action mr-1">No.</div>
         <div class="v-list-item__content">매입사</div>
         <div class="v-list-item__action ml-2">매입금액</div>
       </v-subheader>
       <v-list-item-group>
         <template v-for="(item, index) in items">
           <v-list-item :key="index">
-            <v-list-item-action class="text-h6 mr-2">
+            <v-list-item-action class="text-h6 mr-1">
               <span>{{ index + 1 }}</span>
             </v-list-item-action>
             <v-list-item-content class="pt-2 pb-2">
