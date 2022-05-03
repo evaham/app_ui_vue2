@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-grow-1 flex-column primary darken-1">
     <div class="d-flex flex-grow-1 align-center justify-center">
-      <v-btn text icon>
+      <v-btn text icon class="imgbox" to="/mainview">
         <v-icon class="text-h1 black--text">mdi-barcode-scan</v-icon>
       </v-btn>
     </div>
@@ -127,8 +127,8 @@ export default {
 <style lang="scss" scoped>
 .imgbox {
   display: flex;
-  width: 150px;
-  height: 150px;
+  width: 150px !important;
+  height: 150px !important;
   border-radius: 50%;
   background: #fff;
   justify-content: center;

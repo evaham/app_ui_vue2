@@ -12,6 +12,9 @@
         <router-link to="/purchaseView">매입내역상세</router-link>
       </v-list-item>
       <v-list-item>
+        <router-link to="/purchaseView2">매입내역상세 가로 스크롤</router-link>
+      </v-list-item>
+      <v-list-item>
         <router-link to="/salegrouplist">특매그룹</router-link>
       </v-list-item>
     </v-list>

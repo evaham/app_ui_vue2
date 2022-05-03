@@ -2,7 +2,7 @@
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
     <div class="pa-1">
-      <v-card class="secondary" elevation="0">
+      <v-card class="secondary darken-3" elevation="0">
         <v-card-title class="pt-1 pb-1 justify-end primary--text">
           <span class="mr-auto text-body-1">총</span>
           <span class="text-h5 font-weight-bold">
@@ -14,7 +14,7 @@
       </v-card>
     </div>
     <v-list class="pt-0">
-      <v-subheader dark class="secondary" style="height: 34px">
+      <v-subheader dark class="secondary darken-3" style="height: 34px">
         <div class="v-list-item__action mr-1">No.</div>
         <div class="v-list-item__content">매입사</div>
         <div class="v-list-item__action ml-2">매입금액</div>
@@ -39,7 +39,7 @@
             <v-list-item-action class="ml-2">
               <v-list-item-title class="text-h6 font-weight-bold">
                 {{ item.money }}
-                <span class="font-weight-regular grey--text">
+                <span class="secondary--text">
                   {{ item.ectmoney }}
                 </span>
               </v-list-item-title>
@@ -54,7 +54,7 @@
         rounded
         depressed
         outlined
-        color="secondary"
+        color="secondary darken-3"
         class="flex-grow-1 ml-2 mr-2"
         @click="dialog3 = true"
       >

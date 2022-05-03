@@ -3,17 +3,25 @@
     <header-nav :propsData="this.propsData"></header-nav>
     <div class="d-flex pa-1">
       <div class="dateselecter">
-        <v-btn class="dateselecter__rbtn" color="secondary" elevation="0">
+        <v-btn
+          class="dateselecter__rbtn"
+          color="secondary darken-3"
+          elevation="0"
+        >
           <v-icon>mdi-chevron-left</v-icon>
         </v-btn>
         <input type="text" value="2022년 04월" class="text-center" />
-        <v-btn class="dateselecter__lbtn" color="secondary" elevation="0">
+        <v-btn
+          class="dateselecter__lbtn"
+          color="secondary darken-3"
+          elevation="0"
+        >
           <v-icon>mdi-chevron-right</v-icon>
         </v-btn>
       </div>
     </div>
     <v-list class="pt-0">
-      <v-subheader dark class="secondary" style="height: 34px">
+      <v-subheader dark class="secondary darken-3" style="height: 34px">
         <div class="v-list-item__action mr-1"></div>
         <div class="v-list-item__content">그룹명/시작일~종료일</div>
         <div class="v-list-item__action justify-end"></div>
