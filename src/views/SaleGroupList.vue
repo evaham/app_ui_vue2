@@ -30,11 +30,21 @@
         <template v-for="(item, index) in items">
           <v-list-item :key="index">
             <v-list-item-action class="mr-2">
-              <span
-                ><v-icon class="text-h4"
-                  >mdi-checkbox-blank-circle</v-icon
-                ></span
+              <div
+                style="
+                  display: flex;
+                  width: 24px;
+                  height: 24px;
+                  border-radius: 50%;
+                  color: #fff;
+                  justify-content: center;
+                  align-items: center;
+                  font-weight: 600;
+                "
+                :class="item.iconcolor"
               >
+                {{ item.icontext }}
+              </div>
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-subtitle class="text-subtitle-1">{{
@@ -78,24 +88,32 @@ export default {
         timecolor: "purple--text",
         sdate: "22.02.28",
         edate: "22.05.31",
+        icontext: "최",
+        iconcolor: "red",
       },
       {
         name: "적립 제외 (7)",
         timecolor: "purple--text",
         sdate: "22.02.28",
         edate: "22.05.31",
+        icontext: "우",
+        iconcolor: "blue",
       },
       {
         name: "2월 롯데칠성 (0)",
         timecolor: "grey--text",
         sdate: "22.02.01",
         edate: "22.05.31",
+        icontext: "일",
+        iconcolor: "grey",
       },
       {
-        name: "2월 롯데칠성 (0)",
+        name: "10월 특매 (7)",
         timecolor: "grey--text",
         sdate: "22.02.01",
         edate: "22.05.31",
+        icontext: "일",
+        iconcolor: "grey",
       },
     ],
   }),
