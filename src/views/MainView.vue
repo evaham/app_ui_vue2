@@ -15,10 +15,15 @@
         <router-link to="/purchaseView2">매입내역상세 가로 스크롤</router-link>
       </v-list-item>
       <v-list-item>
-        <router-link to="/purchaseView2">매입내역상세 가로 스크롤</router-link>
+        <router-link to="/purchaseViewTable"
+          >매입내역상세 가로 스크롤 테이블</router-link
+        >
       </v-list-item>
       <v-list-item>
         <router-link to="/salegrouplist">특매그룹</router-link>
+      </v-list-item>
+      <v-list-item>
+        <router-link to="/salegoodslist">특매리스트</router-link>
       </v-list-item>
     </v-list>
   </v-main>
