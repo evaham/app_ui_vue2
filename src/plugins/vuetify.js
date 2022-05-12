@@ -10,6 +10,7 @@ export default new Vuetify({
       light: {
         primary: colors.yellow,
         secondary: colors.grey,
+        tertiary: colors.brown,
         accent: colors.amber,
       },
     },

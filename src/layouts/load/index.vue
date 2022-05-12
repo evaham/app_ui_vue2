@@ -1,9 +1,10 @@
 <template>
   <div class="d-flex flex-grow-1 flex-column primary darken-1">
-    <div class="d-flex flex-grow-1 align-center justify-center">
+    <div class="d-flex flex-column flex-grow-1 align-center justify-center">
       <v-btn text icon class="imgbox" to="/mainview">
         <v-icon class="text-h1 black--text">mdi-barcode-scan</v-icon>
       </v-btn>
+      <p class="text-h6 mt-3 font-weight-black">핸드터미널</p>
     </div>
     <div class="d-flex flex-grow-1 align-center justify-center">
       <div class="logo">

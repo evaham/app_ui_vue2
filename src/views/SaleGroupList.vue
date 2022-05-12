@@ -23,7 +23,7 @@
     <v-list class="pt-0">
       <v-subheader dark class="secondary darken-3" style="height: 34px">
         <div class="v-list-item__action mr-1"></div>
-        <div class="v-list-item__content">그룹명/시작일~종료일</div>
+        <div class="v-list-item__content">그룹명 (상품수)</div>
         <div class="v-list-item__action justify-end"></div>
       </v-subheader>
       <v-list-item-group>
@@ -47,12 +47,12 @@
               </div>
             </v-list-item-action>
             <v-list-item-content>
-              <v-list-item-subtitle class="text-subtitle-1">{{
-                item.name
-              }}</v-list-item-subtitle>
               <v-list-item-title class="text-h6">
-                {{ item.sdate }} ~ {{ item.edate }}
+                {{ item.name }}
               </v-list-item-title>
+              <v-list-item-subtitle class="text-subtitle-1 black--text">
+                {{ item.sdate }} ~ {{ item.edate }}
+              </v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
           <v-divider v-if="index < items.length" :key="index"></v-divider>
@@ -63,6 +63,7 @@
       <v-btn
         depressed
         rounded
+        large
         color="primary darken-1 black--text"
         class="flex-grow-1 ml-2 mr-2"
       >
