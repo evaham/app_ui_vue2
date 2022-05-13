@@ -5,15 +5,12 @@
       <v-card class="tertiary lighten-4" elevation="0">
         <v-card-title class="pt-1 pb-1 justify-end">
           <span class="mr-auto text-body-1">총</span>
-          <span class="text-h5 font-weight-bold">
-            9,786
-            <!-- <span class="font-weight-regular">.65</span> -->
-          </span>
+          <span class="text-h5 font-weight-bold"> 9,786 </span>
           <span class="ml-4 text-body-1">원</span>
         </v-card-title>
       </v-card>
     </div>
-    <v-card style="overflow-x: scroll" class="ma-1 mt-0" outlined elevation="0">
+    <v-card style="overflow-x: scroll" tile elevation="0">
       <v-list class="pt-0">
         <v-subheader dark class="secondary darken-3" style="height: 34px">
           <div class="v-list-item__action mr-1">No.</div>
@@ -72,7 +69,7 @@
     </v-app-bar>
     <v-dialog v-model="dialog3" persistent max-width="500px">
       <v-card>
-        <v-card-title class="pa-2">
+        <v-card-title class="pa-2 primary darken-1">
           <span class="flex-grow-1 text-center">공급사</span>
           <v-btn
             icon
@@ -102,6 +99,7 @@
         <v-card-actions>
           <v-btn
             rounded
+            large
             depressed
             color="primary darken-1 black--text"
             class="flex-grow-1 ml-2 mr-2"
@@ -111,6 +109,7 @@
           </v-btn>
           <v-btn
             rounded
+            large
             depressed
             disabled
             color="primary darken-1 black--text"

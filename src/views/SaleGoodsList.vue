@@ -30,7 +30,7 @@
         </v-list>
       </v-card>
     </div>
-    <v-card style="overflow-x: scroll" class="ma-1 mt-0" outlined elevation="0">
+    <v-card style="overflow-x: scroll" tile elevation="0">
       <v-list class="pt-0" style="width: 450px">
         <v-subheader dark class="secondary darken-3" style="height: 34px">
           <div class="v-list-item__action mr-1">No.</div>

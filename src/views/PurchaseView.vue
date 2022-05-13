@@ -2,7 +2,7 @@
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
     <div class="pa-1">
-      <v-card class="tertiary lighten-4" elevation="0">
+      <v-card class="tertiary lighten-4 pa-1" elevation="0">
         <v-list dense class="transparent">
           <v-list-item style="min-height: 24px">
             <div class="mr-10" style="min-width: 50px">공급사</div>
@@ -21,7 +21,7 @@
         </v-list>
       </v-card>
     </div>
-    <v-card style="overflow-x: scroll" class="ma-1 mt-0" outlined elevation="0">
+    <v-card style="overflow-x: scroll" tile elevation="0">
       <v-list class="pt-0" style="width: 450px">
         <v-subheader dark class="secondary darken-3" style="height: 34px">
           <div class="v-list-item__action mr-1"></div>

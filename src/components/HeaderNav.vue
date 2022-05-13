@@ -1,19 +1,22 @@
 <template>
   <v-app-bar color="primary darken-1" dense app elevation="0">
+    <v-btn icon @click="goBack" v-if="propsData.pageBack" class="appbar__left">
+      <v-icon>mdi-arrow-left</v-icon>
+    </v-btn>
     <v-btn
       icon
-      @click="goBack"
-      v-show="propsData.pageBack"
+      v-if="propsData.pageMenu"
       class="appbar__left"
+      @click.stop="drawer = !drawer"
     >
-      <v-icon>mdi-arrow-left</v-icon>
+      <v-icon>mdi-menu</v-icon>
     </v-btn>
     <div class="text-h6 flex-grow-1 text-center">
       {{ propsData.pagetitle }}
     </div>
     <v-btn
       text
-      v-show="propsData.pageBtn"
+      v-if="propsData.pageBtn"
       class="appbar__right"
       :to="propsData.pageTo"
       >{{ propsData.pageBtnName }}</v-btn
@@ -30,6 +33,7 @@ export default {
       pageBtn: Boolean,
       pageBtnName: String,
       pageTo: String,
+      pageMenu: Boolean,
     },
   },
   methods: {
