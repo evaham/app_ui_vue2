@@ -3,7 +3,7 @@
     <header-nav :propsData="this.propsData"></header-nav>
     <div class="pa-1">
       <v-card class="tertiary lighten-4 pa-1" elevation="0">
-        <v-list dense class="transparent">
+        <v-list dense class="transparent pa-0">
           <v-list-item style="min-height: 24px">
             <div class="mr-10" style="min-width: 50px">공급사</div>
             <div>롯데칠성음료</div>
