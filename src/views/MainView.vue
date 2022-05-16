@@ -120,7 +120,7 @@ export default {
       {
         link: "/purchaselist",
         name: "매입/반품",
-        bg: "primary darken-1",
+        bg: "secondary lighten-2",
       },
       {
         link: "/purchaseView",
@@ -131,7 +131,7 @@ export default {
       {
         link: "/salegrouplist",
         name: "특매그룹",
-        bg: "primary darken-1",
+        bg: "secondary lighten-2",
       },
       {
         link: "/salegoodslist",
@@ -142,7 +142,7 @@ export default {
       {
         link: "/salegrouplist",
         name: "특매",
-        bg: "primary darken-1",
+        bg: "secondary lighten-2",
       },
       {
         link: "/salegoodslist",
@@ -153,7 +153,7 @@ export default {
       {
         link: "/salegrouplist",
         name: "매대그룹",
-        bg: "primary darken-1",
+        bg: "secondary lighten-2",
       },
     ],
   }),

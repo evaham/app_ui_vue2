@@ -90,6 +90,8 @@
             type="text"
             @click:clear="clearMessage"
             class="mt-3"
+            background-color="primary lighten-4"
+            color="secondary darken-3"
           ></v-text-field>
           <div class="text-subtitle-1" style="min-height: 100px">
             공급사명1 리스트<br />
