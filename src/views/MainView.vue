@@ -1,6 +1,6 @@
 <template>
   <v-main class="">
-    <v-app-bar color="primary darken-1" dense app elevation="0">
+    <v-app-bar color="primary" dense app elevation="0">
       <v-btn
         icon
         @click="goBack"
@@ -17,7 +17,7 @@
       >
         <v-icon>mdi-menu</v-icon>
       </v-btn>
-      <div class="text-h6 flex-grow-1 text-center">
+      <div class="text-h6 flex-grow-1 text-center font-weight-bold">
         {{ propsData.pagetitle }}
       </div>
       <v-btn
@@ -53,14 +53,38 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <div class="pa-1">
+    <div class="pa-1" v-if="show == true">
       <v-card class="tertiary lighten-4" elevation="0">
-        <v-card-title class="pt-1 pb-1">
-          <span class="text-body-2">마스터 수신 시각 : 2022-05-10 16:58</span>
-          <v-btn icon small class="ml-auto"><v-icon>mdi-refresh</v-icon></v-btn>
+        <v-card-title class="pa-1">
+          <span class="text-body-2">마스터 수신 시각 :</span>
+          <span class="text-body-1" style="font-weight: 800"
+            >&nbsp;2022-05-10 16:58</span
+          >
+          <v-btn icon small class="ml-auto" @click="show = false"
+            ><v-icon>mdi-refresh</v-icon></v-btn
+          >
         </v-card-title>
       </v-card>
     </div>
+    <div class="pa-1" v-if="show == false">
+      <v-card class="tertiary lighten-4" elevation="0">
+        <p class="pa-1 mb-1 text-center">
+          수신된 마스터 정보가 없습니다.<br />
+          하단 버튼을 눌러 마스터 수신후, 메뉴를 이용하시길 바랍니다.
+        </p>
+        <div class="d-flex justify-center">
+          <v-btn
+            dark
+            rounded
+            @click="show = true"
+            color="primary darken-1"
+            class="ma-1 mb-2 black--text justify-center"
+            >마스터수신</v-btn
+          >
+        </div>
+      </v-card>
+    </div>
+
     <v-container fluid class="pa-2">
       <v-row dense>
         <v-col v-for="(item, index) in links" :key="index" :cols="linkflex">
@@ -101,6 +125,7 @@
 export default {
   name: "MainView",
   data: () => ({
+    show: true,
     propsData: {
       pagetitle: "투게더스",
       pageBack: false,
@@ -178,5 +203,13 @@ export default {
     #f4f4f4 31%,
     #f4f4f4 100%
   );
+}
+.appbar__right {
+  position: absolute !important;
+  right: 16px;
+}
+.appbar__left {
+  position: absolute !important;
+  left: 16px;
 }
 </style>
