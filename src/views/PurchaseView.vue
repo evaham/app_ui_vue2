@@ -75,6 +75,7 @@
     </v-card>
     <v-app-bar app bottom elevation="0" class="white">
       <v-btn
+        large
         rounded
         depressed
         color="primary darken-1 black--text"

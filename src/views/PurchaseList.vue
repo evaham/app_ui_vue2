@@ -1,7 +1,7 @@
 <template>
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
-    <div class="pa-1">
+    <!-- <div class="pa-1">
       <v-card class="tertiary lighten-4" elevation="0">
         <v-card-title class="pt-1 pb-1 justify-end">
           <span class="mr-auto text-body-1">총</span>
@@ -9,13 +9,35 @@
           <span class="ml-4 text-body-1">원</span>
         </v-card-title>
       </v-card>
+    </div> -->
+    <div class="d-flex pa-1">
+      <v-btn
+        depressed
+        outlined
+        large
+        color="secondary darken-3"
+        class="flex-grow-1 ml-2 mr-2"
+        @click="dialog3 = true"
+      >
+        <span class="text-h6">1.발주</span>
+      </v-btn>
+      <v-btn
+        depressed
+        outlined
+        large
+        color="secondary darken-3"
+        class="flex-grow-1 ml-2 mr-2"
+        @click="dialog3 = true"
+      >
+        <span class="text-h6">2.반품</span>
+      </v-btn>
     </div>
     <v-card style="overflow-x: scroll" tile elevation="0">
       <v-list class="pt-0">
         <v-subheader dark class="secondary darken-3" style="height: 34px">
           <div class="v-list-item__action mr-1">No.</div>
-          <div class="v-list-item__content">매입사</div>
-          <div class="v-list-item__action ml-2">매입금액</div>
+          <div class="v-list-item__content">공급사</div>
+          <div class="v-list-item__action ml-2">품목수</div>
         </v-subheader>
         <v-list-item-group>
           <template v-for="(item, index) in items">
@@ -36,8 +58,11 @@
               </v-list-item-content>
               <v-list-item-action class="ml-2">
                 <v-list-item-title class="text-h6 font-weight-bold">
-                  {{ item.money }}
+                  {{ item.count }}
                 </v-list-item-title>
+                <v-list-item-subtitle class="mt-0 text-subtitle-1 mt-0">
+                  {{ item.money }}
+                </v-list-item-subtitle>
               </v-list-item-action>
             </v-list-item>
             <v-divider v-if="index < items.length" :key="index"></v-divider>
@@ -46,17 +71,6 @@
       </v-list>
     </v-card>
     <v-app-bar app bottom elevation="0" class="white" v-show="checkOpt">
-      <v-btn
-        rounded
-        depressed
-        outlined
-        large
-        color="secondary darken-3"
-        class="flex-grow-1 ml-2 mr-2"
-        @click="dialog3 = true"
-      >
-        <span class="text-h6">추가</span>
-      </v-btn>
       <v-btn
         rounded
         depressed
@@ -69,7 +83,7 @@
     </v-app-bar>
     <v-dialog v-model="dialog3" persistent max-width="500px">
       <v-card>
-        <v-card-title class="pa-2 primary darken-1">
+        <v-card-title class="pa-2 primary">
           <span class="flex-grow-1 text-center">공급사</span>
           <v-btn
             icon
@@ -81,6 +95,7 @@
         </v-card-title>
         <v-divider></v-divider>
         <v-card-text>
+          <p class="text-center text-h6 mt-2 mb-2">선택 공급사명</p>
           <v-text-field
             dense
             v-model="message"
@@ -90,12 +105,22 @@
             type="text"
             @click:clear="clearMessage"
             class="mt-3"
-            background-color="primary lighten-4"
+            background-color="#fffeef"
             color="secondary darken-3"
           ></v-text-field>
-          <div class="text-subtitle-1" style="min-height: 100px">
-            공급사명1 리스트<br />
-            공급사명2 리스트
+          <div
+            style="
+              overflow: hidden;
+              overflow-y: auto;
+              height: 120px;
+              font-size: 1.25em;
+            "
+          >
+            <p>공급사명1 리스트</p>
+            <p>공급사명1 리스트</p>
+            <p>공급사명1 리스트</p>
+            <p>공급사명1 리스트</p>
+            <p>공급사명1 리스트</p>
           </div>
         </v-card-text>
         <v-card-actions>
@@ -134,7 +159,7 @@ export default {
     checkOpt: true,
     dialog3: false,
     propsData: {
-      pagetitle: "매입내역",
+      pagetitle: "매입/반품",
       pageBack: true,
       pageBtn: true,
       pageBtnName: "편집",
@@ -142,45 +167,57 @@ export default {
     },
     items: [
       {
+        type: 1,
         name: "서울우유",
         time: "오늘 11 : 31",
         timecolor: "primary--text text--darken-4",
         money: "5,715",
+        count: "15",
         ectmoney: ".00",
       },
       {
+        type: 1,
         name: "롯데칠성음료",
         time: "오늘 11 : 31",
         timecolor: "primary--text text--darken-4",
         money: "2,166",
+        count: "15",
         ectmoney: ".65",
       },
       {
+        type: 1,
         name: "서울우유",
         time: "2022-04-20 11 : 31",
         timecolor: "grey--text",
         money: "1,905",
+        count: "15",
         ectmoney: ".00",
       },
       {
+        type: 1,
         name: "서울우유",
         time: "오늘 11 : 31",
         timecolor: "primary--text text--darken-4",
         money: "5,715",
+        count: "15",
         ectmoney: ".00",
       },
       {
+        type: 1,
         name: "롯데칠성음료",
         time: "오늘 11 : 31",
         timecolor: "primary--text text--darken-4",
         money: "2,166",
+        count: "15",
         ectmoney: ".65",
       },
       {
+        type: 1,
         name: "서울우유서울우유서울우유",
         time: "2022-04-20 11 : 31",
         timecolor: "grey--text",
         money: "211,905",
+        count: "15",
         ectmoney: ".00",
       },
     ],

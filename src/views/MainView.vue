@@ -27,6 +27,14 @@
         :to="propsData.pageTo"
         >{{ propsData.pageBtnName }}</v-btn
       >
+      <v-btn
+        text
+        v-if="propsData.pageMenu"
+        class="appbar__right"
+        @click.stop="drawer = !drawer"
+      >
+        색
+      </v-btn>
     </v-app-bar>
     <v-navigation-drawer
       v-model="drawer"
@@ -98,12 +106,14 @@
             height="85"
           >
             <v-card-title
-              class="pa-0 pt-2 pl-2 text-h4 font-weight-bold primary--text"
+              class="pa-0 pt-2 pl-1 text-h5 font-weight-bold primary--text"
               >{{ index + 1 }}</v-card-title
             >
-            <v-card-title class="text-body-1 pa-0 pl-2 font-weight-bold">{{
-              item.name
-            }}</v-card-title>
+            <v-card-title
+              class="text-h6 pa-0 pl-1"
+              style="font-size: 1.2rem !important"
+              >{{ item.name }}</v-card-title
+            >
           </v-card>
         </v-col>
       </v-row>
@@ -163,7 +173,7 @@ export default {
       },
       {
         link: "/salegoodslist",
-        name: "특매리스트",
+        name: "특매",
         bg: "secondary darken-3",
         color: "dark",
       },
