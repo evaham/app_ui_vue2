@@ -30,18 +30,12 @@
         </v-list>
       </v-card>
     </div>
-    <v-card style="overflow-x: scroll" tile elevation="0">
-      <v-list class="pt-0" style="width: 450px">
+    <v-card tile elevation="0">
+      <v-list class="pt-0">
         <v-subheader dark class="secondary darken-3" style="height: 34px">
           <div class="v-list-item__action mr-1">No.</div>
           <div class="v-list-item__content">상품명</div>
-          <div class="v-list-item__action justify-end" style="width: 90px">
-            정상판매
-          </div>
-          <div class="v-list-item__action" style="width: 40px"></div>
-          <div class="v-list-item__action justify-end" style="width: 90px">
-            특매판매
-          </div>
+          <div class="v-list-item__action justify-end">정상가 / 특매가</div>
         </v-subheader>
         <v-list-item-group>
           <template v-for="(item, index) in items">
@@ -58,19 +52,9 @@
                 }}</v-list-item-subtitle>
               </v-list-item-content>
               <v-list-item-action class="ml-2">
-                <v-list-item-title
-                  class="text-h6 mb-0 text-right"
-                  style="width: 90px"
-                >
+                <v-list-item-subtitle class="text-subtitle-1 mb-0 text-right">
                   {{ item.money }}
-                </v-list-item-title>
-              </v-list-item-action>
-              <v-list-item-action class="ml-2 text-right" style="width: 40px">
-                <v-list-item-title>
-                  <v-icon>mdi-play</v-icon>
-                </v-list-item-title>
-              </v-list-item-action>
-              <v-list-item-action class="ml-2 text-right" style="width: 90px">
+                </v-list-item-subtitle>
                 <v-list-item-title
                   class="text-h6 mb-0 red--text font-weight-bold align-self-end"
                 >
@@ -130,10 +114,10 @@ export default {
         quantity: "90,000",
       },
       {
-        name: "롯데핫식스캔데핫식스캔데핫식스캔(240ml)",
+        name: "일이삼사오육칠팔구십일이삼사오육칠팔구십",
         barcode: "8801056038861",
         timecolor: "",
-        money: "190",
+        money: "9.999,999",
         quantity: "9,000",
       },
     ],

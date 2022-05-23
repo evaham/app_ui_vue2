@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="primary" dense app elevation="0">
+  <v-app-bar :color="basecolor" :dark="dark" dense app elevation="0">
     <v-btn icon @click="goBack" v-if="propsData.pageBack" class="appbar__left">
       <v-icon>mdi-arrow-left</v-icon>
     </v-btn>
@@ -24,6 +24,7 @@
   </v-app-bar>
 </template>
 <script>
+import { mapState } from "vuex";
 export default {
   name: "HeaderNav",
   props: {
@@ -58,6 +59,9 @@ export default {
         ? (this.iconIndex = 0)
         : this.iconIndex++;
     },
+  },
+  computed: {
+    ...mapState(["basecolor", "dark"]),
   },
 };
 </script>

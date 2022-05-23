@@ -12,24 +12,15 @@
     </div> -->
     <div class="d-flex pa-1">
       <v-btn
-        depressed
-        outlined
-        large
-        color="secondary darken-3"
-        class="flex-grow-1 ml-2 mr-2"
         @click="dialog3 = true"
+        outlined
+        color="secondary darken-3"
+        class="mr-2"
       >
-        <span class="text-h6">1.발주</span>
+        <span class="text-body-1">1.발주</span>
       </v-btn>
-      <v-btn
-        depressed
-        outlined
-        large
-        color="secondary darken-3"
-        class="flex-grow-1 ml-2 mr-2"
-        @click="dialog3 = true"
-      >
-        <span class="text-h6">2.반품</span>
+      <v-btn @click="dialog3 = true" outlined color="red darken-1" class="mr-2">
+        <span class="text-body-1">2.반품</span>
       </v-btn>
     </div>
     <v-card style="overflow-x: scroll" tile elevation="0">
@@ -37,18 +28,20 @@
         <v-subheader dark class="secondary darken-3" style="height: 34px">
           <div class="v-list-item__action mr-1">No.</div>
           <div class="v-list-item__content">공급사</div>
-          <div class="v-list-item__action ml-2">품목수</div>
+          <div class="v-list-item__action ml-2">품목수 / 매입액</div>
         </v-subheader>
         <v-list-item-group>
           <template v-for="(item, index) in items">
-            <v-list-item :key="index">
+            <v-list-item :key="index" :class="item.bgcolor">
               <v-list-item-action class="text-h6 mr-1">
                 <span>{{ index + 1 }}</span>
               </v-list-item-action>
               <v-list-item-content class="pt-2 pb-2">
-                <v-list-item-title class="text-h6 mb-0">{{
-                  item.name
-                }}</v-list-item-title>
+                <v-list-item-title
+                  class="text-h6 mb-0"
+                  :class="item.fontcolor"
+                  >{{ item.name }}</v-list-item-title
+                >
                 <v-list-item-subtitle
                   class="mt-0 text-subtitle-1 mt-0"
                   :class="item.timecolor"
@@ -57,10 +50,15 @@
                 </v-list-item-subtitle>
               </v-list-item-content>
               <v-list-item-action class="ml-2">
-                <v-list-item-title class="text-h6 font-weight-bold">
+                <v-list-item-title
+                  class="text-h6 font-weight-bold black--text align-self-end"
+                >
                   {{ item.count }}
                 </v-list-item-title>
-                <v-list-item-subtitle class="mt-0 text-subtitle-1 mt-0">
+                <v-list-item-subtitle
+                  class="mt-0 text-subtitle-1 mt-0 black--text"
+                  :class="item.fontcolor"
+                >
                   {{ item.money }}
                 </v-list-item-subtitle>
               </v-list-item-action>
@@ -105,7 +103,7 @@
             type="text"
             @click:clear="clearMessage"
             class="mt-3"
-            background-color="#fffeef"
+            background-color="primary lighten-5"
             color="secondary darken-3"
           ></v-text-field>
           <div
@@ -168,12 +166,11 @@ export default {
     items: [
       {
         type: 1,
-        name: "서울우유",
-        time: "오늘 11 : 31",
-        timecolor: "primary--text text--darken-4",
-        money: "5,715",
-        count: "15",
-        ectmoney: ".00",
+        name: "일이삼사오육칠팔구십일이삼사오육칠팔구십",
+        time: "2022-04-20 12:12",
+        timecolor: "grey--text",
+        money: "99,999,999",
+        count: "999",
       },
       {
         type: 1,
@@ -181,7 +178,7 @@ export default {
         time: "오늘 11 : 31",
         timecolor: "primary--text text--darken-4",
         money: "2,166",
-        count: "15",
+        count: "54",
         ectmoney: ".65",
       },
       {
@@ -190,7 +187,7 @@ export default {
         time: "2022-04-20 11 : 31",
         timecolor: "grey--text",
         money: "1,905",
-        count: "15",
+        count: "22",
         ectmoney: ".00",
       },
       {
@@ -199,14 +196,33 @@ export default {
         time: "오늘 11 : 31",
         timecolor: "primary--text text--darken-4",
         money: "5,715",
-        count: "15",
-        ectmoney: ".00",
+        count: "20",
+        fontcolor: "red--text text--darken-1",
+        bgcolor: "pink lighten-5",
       },
       {
         type: 1,
         name: "롯데칠성음료",
-        time: "오늘 11 : 31",
-        timecolor: "primary--text text--darken-4",
+        time: "2022-04-20 11 : 31",
+        timecolor: "grey--text",
+        money: "2,166",
+        count: "15",
+        ectmoney: ".65",
+      },
+      {
+        type: 1,
+        name: "롯데칠성음료",
+        time: "2022-04-20 11 : 31",
+        timecolor: "grey--text",
+        money: "2,166",
+        count: "15",
+        ectmoney: ".65",
+      },
+      {
+        type: 1,
+        name: "롯데칠성음료",
+        time: "2022-04-20 11 : 31",
+        timecolor: "grey--text",
         money: "2,166",
         count: "15",
         ectmoney: ".65",
@@ -217,8 +233,27 @@ export default {
         time: "2022-04-20 11 : 31",
         timecolor: "grey--text",
         money: "211,905",
-        count: "15",
+        count: "11",
+        fontcolor: "red--text text--darken-1",
         ectmoney: ".00",
+      },
+      {
+        type: 1,
+        name: "롯데칠성음료",
+        time: "2022-04-20 11 : 31",
+        timecolor: "grey--text",
+        money: "2,166",
+        count: "7",
+        ectmoney: ".65",
+      },
+      {
+        type: 1,
+        name: "롯데칠성음료",
+        time: "오늘 11 : 31",
+        timecolor: "primary--text text--darken-4",
+        money: "2,166",
+        count: "3",
+        ectmoney: ".65",
       },
     ],
     password: "Password",

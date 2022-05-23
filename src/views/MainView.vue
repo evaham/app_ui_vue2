@@ -1,6 +1,6 @@
 <template>
   <v-main class="">
-    <v-app-bar color="primary" dense app elevation="0">
+    <v-app-bar :color="basecolor" :dark="dark" dense app elevation="0">
       <v-btn
         icon
         @click="goBack"
@@ -31,9 +31,9 @@
         text
         v-if="propsData.pageMenu"
         class="appbar__right"
-        @click.stop="drawer = !drawer"
+        @click.stop="$store.commit('ischangecolor')"
       >
-        색
+        색전환
       </v-btn>
     </v-app-bar>
     <v-navigation-drawer
@@ -132,6 +132,7 @@
   </v-main>
 </template>
 <script>
+import { mapState } from "vuex";
 export default {
   name: "MainView",
   data: () => ({
@@ -201,6 +202,9 @@ export default {
     group() {
       this.drawer = false;
     },
+  },
+  computed: {
+    ...mapState(["basecolor", "dark"]),
   },
 };
 </script>
