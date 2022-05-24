@@ -5,7 +5,7 @@
       <v-card class="tertiary lighten-4" elevation="0">
         <v-list dense class="transparent">
           <v-list-item style="min-height: 24px">
-            <div class="mr-10" style="min-width: 50px">그룹명</div>
+            <div class="mr-9" style="min-width: 45px">그룹명</div>
             <div>감사세일</div>
             <div
               style="
@@ -24,7 +24,7 @@
             </div>
           </v-list-item>
           <v-list-item style="min-height: 24px">
-            <div class="mr-10" style="min-width: 50px">기간</div>
+            <div class="mr-9" style="min-width: 45px">기간</div>
             <div class="">2022.04.21 ~ 2022.06.24</div>
           </v-list-item>
         </v-list>
@@ -40,11 +40,11 @@
         <v-list-item-group>
           <template v-for="(item, index) in items">
             <v-list-item :key="index">
-              <v-list-item-action class="text-h6 mr-1">
-                <span>{{ index + 1 }}</span>
+              <v-list-item-action class="text-h6 font-weight-bold mr-1">
+                <span class="grey--text">{{ index + 1 }}</span>
               </v-list-item-action>
               <v-list-item-content>
-                <v-list-item-title class="text-h6">
+                <v-list-item-title class="text-h6 font-weight-bold">
                   {{ item.name }}
                 </v-list-item-title>
                 <v-list-item-subtitle class="text-subtitle-1 black--text">{{
@@ -56,7 +56,7 @@
                   {{ item.money }}
                 </v-list-item-subtitle>
                 <v-list-item-title
-                  class="text-h6 mb-0 red--text font-weight-bold align-self-end"
+                  class="text-h6 font-weight-bold mb-0 red--text align-self-end"
                 >
                   {{ item.money }}
                 </v-list-item-title>
@@ -75,7 +75,7 @@
         color="primary darken-1 black--text"
         class="flex-grow-1 ml-2 mr-2"
       >
-        <span class="text-h6">상품 추가</span>
+        <span class="text-h6 font-weight-bold">상품 추가</span>
       </v-btn>
     </v-app-bar>
   </v-main>

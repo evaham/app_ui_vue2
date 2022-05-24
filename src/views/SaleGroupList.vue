@@ -47,7 +47,7 @@
               </div>
             </v-list-item-action>
             <v-list-item-content>
-              <v-list-item-title class="text-h6">
+              <v-list-item-title class="text-h6 font-weight-bold">
                 {{ item.name }}
               </v-list-item-title>
               <v-list-item-subtitle class="text-subtitle-1 black--text">
@@ -67,7 +67,7 @@
         color="primary darken-1 black--text"
         class="flex-grow-1 ml-2 mr-2"
       >
-        <span class="text-h6">새 특매그룹 등록</span>
+        <span class="text-h6 font-weight-bold">새 특매그룹 등록</span>
       </v-btn>
     </v-app-bar>
   </v-main>
@@ -90,7 +90,7 @@ export default {
         sdate: "22.02.28",
         edate: "22.05.31",
         icontext: "최",
-        iconcolor: "red",
+        iconcolor: "red lighten-1",
       },
       {
         name: "적립 제외 (7)",
@@ -98,7 +98,7 @@ export default {
         sdate: "22.02.28",
         edate: "22.05.31",
         icontext: "우",
-        iconcolor: "blue",
+        iconcolor: "blue lighten-1",
       },
       {
         name: "2월 롯데칠성 (0)",
@@ -106,15 +106,55 @@ export default {
         sdate: "22.02.01",
         edate: "22.05.31",
         icontext: "일",
-        iconcolor: "grey",
+        iconcolor: "grey lighten-1",
       },
       {
-        name: "10월 특매 (7)",
+        name: "적립 (6)",
+        timecolor: "purple--text",
+        sdate: "22.02.28",
+        edate: "22.05.31",
+        icontext: "최",
+        iconcolor: "red lighten-2",
+      },
+      {
+        name: "적립 제외 (7)",
+        timecolor: "purple--text",
+        sdate: "22.02.28",
+        edate: "22.05.31",
+        icontext: "우",
+        iconcolor: "blue lighten-2",
+      },
+      {
+        name: "2월 롯데칠성 (0)",
         timecolor: "grey--text",
         sdate: "22.02.01",
         edate: "22.05.31",
         icontext: "일",
-        iconcolor: "grey",
+        iconcolor: "grey lighten-2",
+      },
+      {
+        name: "적립 (6)",
+        timecolor: "purple--text",
+        sdate: "22.02.28",
+        edate: "22.05.31",
+        icontext: "최",
+        iconcolor: "red lighten-3",
+      },
+      {
+        name: "적립 제외 (7)",
+        timecolor: "purple--text",
+        sdate: "22.02.28",
+        edate: "22.05.31",
+        icontext: "우",
+        iconcolor: "blue lighten-3",
+      },
+      {
+        name: "2월 롯데칠성 (0)",
+        timecolor: "grey--text",
+        sdate: "22.02.01",
+        edate: "22.05.31",
+        icontext: "일",
+        iconcolor: "grey lighten-3",
       },
     ],
   }),

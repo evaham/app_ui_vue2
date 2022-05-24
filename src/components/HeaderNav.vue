@@ -11,7 +11,7 @@
     >
       <v-icon>mdi-menu</v-icon>
     </v-btn>
-    <div class="text-h6 flex-grow-1 text-center">
+    <div class="text-h6 flex-grow-1 text-center font-weight-bold">
       {{ propsData.pagetitle }}
     </div>
     <v-btn

@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-grow-1 flex-column primary darken-1">
+  <div class="d-flex flex-grow-1 flex-column" :class="basecolor">
     <div class="d-flex flex-column flex-grow-1 align-center justify-center">
       <v-btn text icon class="imgbox" to="/mainview">
         <v-icon class="text-h1 black--text">mdi-barcode-scan</v-icon>
@@ -167,8 +167,13 @@
   </div>
 </template>
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "LoadingLayout",
+  computed: {
+    ...mapState(["basecolor", "dark"]),
+  },
 };
 </script>
 <style lang="scss" scoped>

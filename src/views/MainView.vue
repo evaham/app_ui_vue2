@@ -17,7 +17,7 @@
       >
         <v-icon>mdi-menu</v-icon>
       </v-btn>
-      <div class="text-h6 flex-grow-1 text-center font-weight-bold">
+      <div class="font-weight-bold flex-grow-1 text-center font-weight-bold">
         {{ propsData.pagetitle }}
       </div>
       <v-btn
@@ -106,13 +106,14 @@
             height="85"
           >
             <v-card-title
-              class="pa-0 pt-2 pl-1 text-h5 font-weight-bold primary--text"
+              class="pa-0 pt-1 pl-2 text-h5 font-weight-bold primary--text"
+              style="font-size: 1.7em !important"
               >{{ index + 1 }}</v-card-title
             >
-            <v-card-title
-              class="text-h6 pa-0 pl-1"
-              style="font-size: 1.2rem !important"
-              >{{ item.name }}</v-card-title
+            <v-card-text
+              class="text-h6 pa-1 pt-0 font-weight-bold text-center"
+              style="font-size: 1.2em !important"
+              ><span class="white--text">{{ item.name }}</span></v-card-text
             >
           </v-card>
         </v-col>
@@ -126,7 +127,7 @@
         color="primary darken-1 black--text"
         class="flex-grow-1 ml-2 mr-2"
       >
-        <span class="text-h6">전송대기 : 4</span>
+        <span class="text-h6 font-weight-bold">전송대기 : 4</span>
       </v-btn>
     </v-app-bar>
   </v-main>

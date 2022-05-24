@@ -5,17 +5,17 @@
       <v-card class="tertiary lighten-4 pa-1" elevation="0">
         <v-list dense class="transparent pa-0">
           <v-list-item style="min-height: 24px">
-            <div class="mr-10" style="min-width: 45px">공급사</div>
+            <div class="mr-9" style="min-width: 45px">공급사</div>
             <div>롯데칠성음료</div>
           </v-list-item>
           <v-list-item style="min-height: 24px">
-            <div class="mr-10" style="min-width: 45px">금액</div>
+            <div class="mr-9" style="min-width: 45px">금액</div>
             <div class="">
               <span class="font-weight-bold">12433.35</span> 원
             </div>
           </v-list-item>
           <v-list-item style="min-height: 24px">
-            <div class="mr-10" style="min-width: 45px">날짜</div>
+            <div class="mr-9" style="min-width: 45px">날짜</div>
             <div class="">2022-04-21 11:31</div>
           </v-list-item>
         </v-list>
@@ -39,13 +39,13 @@
         </v-subheader>
         <v-list-item-group>
           <template v-for="(item, index) in items">
-            <v-list-item :key="index">
-              <v-list-item-action class="text-h6 mr-1">
-                <span>{{ index + 1 }}</span>
+            <v-list-item :key="index" style="height: 67px">
+              <v-list-item-action class="text-h6 font-weight-bold mr-1">
+                <span class="grey--text">{{ index + 1 }}</span>
               </v-list-item-action>
               <v-list-item-content class="pt-2 pb-2">
                 <v-list-item-title
-                  class="mt-0 text-h6 mt-0"
+                  class="mt-0 text-h6 font-weight-bold mt-0"
                   :class="item.timecolor"
                 >
                   {{ item.name }}
@@ -56,11 +56,15 @@
                 >
               </v-list-item-content>
               <v-list-item-action class="ml-2">
-                <v-list-item-title class="text-h6 mb-0 align-self-end">
+                <v-list-item-title
+                  class="text-h6 font-weight-bold mb-0 align-self-end"
+                >
                   {{ item.quantity }}
                 </v-list-item-title>
-                <v-list-item-subtitle class="text-subtitle-1 mb-0 black--text">
-                  {{ item.money }}
+                <v-list-item-subtitle
+                  class="text-subtitle-1 font-weight-bold mb-0 black--text"
+                >
+                  {{ item.money }}<span class="grey--text">.00</span>
                 </v-list-item-subtitle>
               </v-list-item-action>
             </v-list-item>
@@ -78,13 +82,13 @@
         </v-subheader>
         <v-list-item-group>
           <template v-for="(item, index) in items">
-            <v-list-item :key="index">
-              <v-list-item-action class="text-h6 mr-1">
-                <span>{{ index + 1 }}</span>
+            <v-list-item :key="index" style="height: 67px">
+              <v-list-item-action class="text-h6 font-weight-bold mr-1">
+                <span class="grey--text">{{ index + 1 }}</span>
               </v-list-item-action>
               <v-list-item-content class="pt-2 pb-2">
                 <v-list-item-title
-                  class="mt-0 text-h6 mt-0"
+                  class="mt-0 text-h6 font-weight-bold mt-0"
                   :class="item.timecolor"
                 >
                   {{ item.name }}
@@ -95,10 +99,14 @@
                 >
               </v-list-item-content>
               <v-list-item-action class="ml-2">
-                <v-list-item-subtitle class="text-subtitle-1 mb-0 black--text">
-                  {{ item.money2 }}
+                <v-list-item-subtitle
+                  class="text-subtitle-1 font-weight-bold mb-0 black--text"
+                >
+                  {{ item.money2 }}<span class="grey--text">.00</span>
                 </v-list-item-subtitle>
-                <v-list-item-subtitle class="text-subtitle-1 mb-0 black--text">
+                <v-list-item-subtitle
+                  class="text-subtitle-1 font-weight-bold mb-0 black--text"
+                >
                   {{ item.money3 }}
                 </v-list-item-subtitle>
               </v-list-item-action>
@@ -117,7 +125,7 @@
         class="flex-grow-1 ml-2 mr-2"
         @click="dialog3 = true"
       >
-        <span class="text-h6">상품 추가</span>
+        <span class="text-h6 font-weight-bold">상품 추가</span>
       </v-btn>
     </v-app-bar>
     <v-dialog v-model="dialog3" max-width="500px">
@@ -143,63 +151,63 @@ export default {
         name: "일이삼사오육칠팔구십일이삼사오육칠팔구십",
         barcode: "8801056002701",
         timecolor: "",
-        money: "9,999,999.00",
+        money: "9,999,999",
         quantity: "999",
-        money2: "999,999.00",
+        money2: "999,999",
         money3: "999,999",
       },
       {
         name: "롯데칸타타아메리카",
         barcode: "8801056018900",
         timecolor: "",
-        money: "2,166.00",
+        money: "2,166",
         quantity: "3",
-        money2: "999,999.00",
+        money2: "999,999",
         money3: "999,999",
       },
       {
         name: "롯데핫식스캔(240ml)",
         barcode: "8801056038861",
         timecolor: "",
-        money: "1,905.00",
+        money: "1,905",
         quantity: "10",
-        money2: "999,999.00",
+        money2: "999,999",
         money3: "999,999",
       },
       {
         name: "롯데칸타타아메리카",
         barcode: "8801056018900",
         timecolor: "",
-        money: "2,166.00",
+        money: "2,166",
         quantity: "3",
-        money2: "999,999.00",
+        money2: "999,999",
         money3: "999,999",
       },
       {
         name: "롯데핫식스캔(240ml)",
         barcode: "8801056038861",
         timecolor: "",
-        money: "1,905.00",
+        money: "1,905",
         quantity: "10",
-        money2: "999,999.00",
+        money2: "999,999",
         money3: "999,999",
       },
       {
         name: "롯데칸타타아메리카",
         barcode: "8801056018900",
         timecolor: "",
-        money: "2,166.00",
+        money: "2,166",
         quantity: "3",
-        money2: "999,999.00",
+        money2: "999,999",
         money3: "999,999",
       },
       {
         name: "롯데핫식스캔(240ml)",
         barcode: "8801056038861",
         timecolor: "",
-        money: "1,905.00",
+        money: "1,905",
         quantity: "10",
-        money2: "999,999.00",
+        money2: "999,999",
         money3: "999,999",
       },
 
@@ -207,9 +215,9 @@ export default {
         name: "롯데핫식스캔데핫식스캔데핫식스캔(240ml)",
         barcode: "8801056038861",
         timecolor: "",
-        money: "190.00",
+        money: "190",
         quantity: "10",
-        money2: "999,999.00",
+        money2: "999,999",
         money3: "999,999",
       },
     ],

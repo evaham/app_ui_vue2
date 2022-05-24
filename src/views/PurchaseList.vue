@@ -1,26 +1,30 @@
 <template>
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
-    <!-- <div class="pa-1">
-      <v-card class="tertiary lighten-4" elevation="0">
-        <v-card-title class="pt-1 pb-1 justify-end">
-          <span class="mr-auto text-body-1">총</span>
-          <span class="text-h5 font-weight-bold"> 9,786 </span>
-          <span class="ml-4 text-body-1">원</span>
-        </v-card-title>
-      </v-card>
-    </div> -->
-    <div class="d-flex pa-1">
+    <div class="d-flex pa-2">
       <v-btn
         @click="dialog3 = true"
-        outlined
-        color="secondary darken-3"
-        class="mr-2"
+        elevation="0"
+        large
+        color="secondary darken-3 flex-grow-1"
+        class="mr-2 text-h6 font-weight-bold"
+        style="border-radius: 14px"
+        height="70"
       >
-        <span class="text-body-1">1.발주</span>
+        <span class="primary--text mr-1">1</span>발주
       </v-btn>
-      <v-btn @click="dialog3 = true" outlined color="red darken-1" class="mr-2">
-        <span class="text-body-1">2.반품</span>
+      <v-btn
+        @click="dialog3 = true"
+        elevation="0"
+        large
+        color="secondary darken-3 flex-grow-1"
+        class="text-h6 font-weight-bold"
+        style="border-radius: 14px"
+        height="70"
+      >
+        <span class="text-h6 font-weight-bold"
+          ><span class="primary--text font-weight-bold mr-1">2</span>반품</span
+        >
       </v-btn>
     </div>
     <v-card style="overflow-x: scroll" tile elevation="0">
@@ -33,12 +37,12 @@
         <v-list-item-group>
           <template v-for="(item, index) in items">
             <v-list-item :key="index" :class="item.bgcolor">
-              <v-list-item-action class="text-h6 mr-1">
-                <span>{{ index + 1 }}</span>
+              <v-list-item-action class="text-h6 font-weight-bold mr-1">
+                <span class="grey--text">{{ index + 1 }}</span>
               </v-list-item-action>
               <v-list-item-content class="pt-2 pb-2">
                 <v-list-item-title
-                  class="text-h6 mb-0"
+                  class="text-h6 font-weight-bold mb-0"
                   :class="item.fontcolor"
                   >{{ item.name }}</v-list-item-title
                 >
@@ -56,7 +60,7 @@
                   {{ item.count }}
                 </v-list-item-title>
                 <v-list-item-subtitle
-                  class="mt-0 text-subtitle-1 mt-0 black--text"
+                  class="mt-0 text-subtitle-1 font-weight-bold mt-0 black--text"
                   :class="item.fontcolor"
                 >
                   {{ item.money }}
@@ -73,16 +77,15 @@
         rounded
         depressed
         large
-        color="primary darken-1 black--text"
+        color="primary darken-1 black--text text-h6 font-weight-bold"
         class="flex-grow-1 ml-2 mr-2"
-      >
-        <span class="text-h6 text--grey">전송</span>
+        >전송
       </v-btn>
     </v-app-bar>
     <v-dialog v-model="dialog3" persistent max-width="500px">
       <v-card>
-        <v-card-title class="pa-2 primary">
-          <span class="flex-grow-1 text-center">공급사</span>
+        <v-card-title class="pa-2" :class="basecolor">
+          <span class="font-weight-bold flex-grow-1 text-center">공급사</span>
           <v-btn
             icon
             @click="dialog3 = false"
@@ -93,8 +96,11 @@
         </v-card-title>
         <v-divider></v-divider>
         <v-card-text>
-          <p class="text-center text-h6 mt-2 mb-2">선택 공급사명</p>
+          <p class="text-center text-h6 font-weight-bold mt-2 mb-2 black--text">
+            선택 공급사명
+          </p>
           <v-text-field
+            label="공급사코드/공급사명/상품바코드"
             dense
             v-model="message"
             filled
@@ -102,9 +108,9 @@
             clearable
             type="text"
             @click:clear="clearMessage"
-            class="mt-3"
+            class="brown--text mt-3"
             background-color="primary lighten-5"
-            color="secondary darken-3"
+            color="brown darken-2"
           ></v-text-field>
           <div
             style="
@@ -112,6 +118,8 @@
               overflow-y: auto;
               height: 120px;
               font-size: 1.25em;
+              font-weight: 700;
+              color: #333;
             "
           >
             <p>공급사명1 리스트</p>
@@ -130,7 +138,7 @@
             class="flex-grow-1 ml-2 mr-2"
             @click="dialog3 = false"
           >
-            <span class="text-h6">스캔</span>
+            <span class="text-h6 font-weight-bold">스캔</span>
           </v-btn>
           <v-btn
             rounded
@@ -141,7 +149,7 @@
             class="flex-grow-1 ml-2 mr-2"
             @click="dialog3 = false"
           >
-            <span class="text-h6">확인</span>
+            <span class="text-h6 font-weight-bold">확인</span>
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -150,6 +158,8 @@
 </template>
 <script>
 import HeaderNav from "@/components/HeaderNav.vue";
+import { mapState } from "vuex";
+
 export default {
   components: { HeaderNav },
   name: "PurchaseList",
@@ -198,7 +208,6 @@ export default {
         money: "5,715",
         count: "20",
         fontcolor: "red--text text--darken-1",
-        bgcolor: "pink lighten-5",
       },
       {
         type: 1,
@@ -268,6 +277,9 @@ export default {
     upValueParent(e) {
       this.checkOpt = e;
     },
+  },
+  computed: {
+    ...mapState(["basecolor", "dark"]),
   },
 };
 </script>
