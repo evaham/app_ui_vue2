@@ -107,7 +107,7 @@
           >
             <v-card-title
               class="pa-0 pt-1 pl-2 text-h5 font-weight-bold primary--text"
-              style="font-size: 1.7em !important"
+              style="font-size: 1.6em !important; font-weight: 800 !important"
               >{{ index + 1 }}</v-card-title
             >
             <v-card-text
