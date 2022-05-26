@@ -41,7 +41,7 @@
                   align-items: center;
                   font-weight: 600;
                 "
-                :class="item.iconcolor"
+                :class="[item.iconcolor, item.textcolor]"
               >
                 {{ item.icontext }}
               </div>
@@ -49,6 +49,7 @@
             <v-list-item-content>
               <v-list-item-title class="text-h6 font-weight-bold">
                 {{ item.name }}
+                <span class="grey--text">{{ item.count }}</span>
               </v-list-item-title>
               <v-list-item-subtitle class="text-subtitle-1 black--text">
                 {{ item.sdate }} ~ {{ item.edate }}
@@ -85,7 +86,38 @@ export default {
     },
     items: [
       {
-        name: "적립 (6)",
+        name: "적립",
+        count: "(6)",
+        timecolor: "purple--text",
+        sdate: "22.02.28",
+        edate: "22.05.31",
+        icontext: "최",
+        textcolor: "red--text text--darken-1",
+        iconcolor: "red lighten-4",
+      },
+      {
+        name: "적립 제외",
+        count: "(28)",
+        timecolor: "purple--text",
+        sdate: "22.02.28",
+        edate: "22.05.31",
+        icontext: "우",
+        textcolor: "blue--text text--darken-1",
+        iconcolor: "blue lighten-4",
+      },
+      {
+        name: "2월 롯데칠성",
+        count: "(6)",
+        timecolor: "grey--text",
+        sdate: "22.02.01",
+        edate: "22.05.31",
+        icontext: "일",
+        textcolor: "grey--text text--darken-1",
+        iconcolor: "grey lighten-4",
+      },
+      {
+        name: "적립",
+        count: "(6)",
         timecolor: "purple--text",
         sdate: "22.02.28",
         edate: "22.05.31",
@@ -93,7 +125,8 @@ export default {
         iconcolor: "red lighten-1",
       },
       {
-        name: "적립 제외 (7)",
+        name: "적립 제외",
+        count: "(28)",
         timecolor: "purple--text",
         sdate: "22.02.28",
         edate: "22.05.31",
@@ -101,7 +134,8 @@ export default {
         iconcolor: "blue lighten-1",
       },
       {
-        name: "2월 롯데칠성 (0)",
+        name: "2월 롯데칠성",
+        count: "(6)",
         timecolor: "grey--text",
         sdate: "22.02.01",
         edate: "22.05.31",
@@ -109,7 +143,8 @@ export default {
         iconcolor: "grey lighten-1",
       },
       {
-        name: "적립 (6)",
+        name: "적립",
+        count: "(120)",
         timecolor: "purple--text",
         sdate: "22.02.28",
         edate: "22.05.31",
@@ -117,7 +152,8 @@ export default {
         iconcolor: "red lighten-2",
       },
       {
-        name: "적립 제외 (7)",
+        name: "적립 제외",
+        count: "(7)",
         timecolor: "purple--text",
         sdate: "22.02.28",
         edate: "22.05.31",
@@ -125,7 +161,8 @@ export default {
         iconcolor: "blue lighten-2",
       },
       {
-        name: "2월 롯데칠성 (0)",
+        name: "2월 롯데칠성",
+        count: "(6)",
         timecolor: "grey--text",
         sdate: "22.02.01",
         edate: "22.05.31",
@@ -133,7 +170,8 @@ export default {
         iconcolor: "grey lighten-2",
       },
       {
-        name: "적립 (6)",
+        name: "적립",
+        count: "(6)",
         timecolor: "purple--text",
         sdate: "22.02.28",
         edate: "22.05.31",
@@ -141,7 +179,8 @@ export default {
         iconcolor: "red lighten-3",
       },
       {
-        name: "적립 제외 (7)",
+        name: "적립 제외",
+        count: "(6)",
         timecolor: "purple--text",
         sdate: "22.02.28",
         edate: "22.05.31",
@@ -149,7 +188,8 @@ export default {
         iconcolor: "blue lighten-3",
       },
       {
-        name: "2월 롯데칠성 (0)",
+        name: "2월 롯데칠성",
+        count: "(6)",
         timecolor: "grey--text",
         sdate: "22.02.01",
         edate: "22.05.31",

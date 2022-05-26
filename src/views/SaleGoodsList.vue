@@ -2,7 +2,7 @@
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
     <div class="pa-1">
-      <v-card class="tertiary lighten-4" elevation="0">
+      <v-card class="secondary lighten-2" elevation="0">
         <v-list dense class="transparent">
           <v-list-item style="min-height: 24px">
             <div class="mr-9" style="min-width: 45px">그룹명</div>

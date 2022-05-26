@@ -2,30 +2,46 @@
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
     <div class="d-flex pa-2">
-      <v-btn
+      <v-card
         @click="dialog3 = true"
         elevation="0"
         large
-        color="secondary darken-3 flex-grow-1"
-        class="mr-2 text-h6 font-weight-bold"
+        color="secondary darken-1"
+        class="mr-2 text-h6 font-weight-bold flex-grow-1 flex-column"
         style="border-radius: 14px"
         height="70"
       >
-        <span class="primary--text mr-1">1</span>발주
-      </v-btn>
-      <v-btn
-        @click="dialog3 = true"
-        elevation="0"
-        large
-        color="secondary darken-3 flex-grow-1"
-        class="text-h6 font-weight-bold"
-        style="border-radius: 14px"
-        height="70"
-      >
-        <span class="text-h6 font-weight-bold"
-          ><span class="primary--text font-weight-bold mr-1">2</span>반품</span
+        <v-card-title
+          class="pa-0 pt-1 pl-2 text-h5 font-weight-bold primary--text"
+          style="font-weight: 800 !important"
+          >1</v-card-title
         >
-      </v-btn>
+        <v-card-text
+          class="text-h6 pa-1 pt-0 font-weight-bold text-center"
+          style="margin-top: -18px"
+          ><span class="white--text">발주</span></v-card-text
+        >
+      </v-card>
+      <v-card
+        @click="dialog3 = true"
+        elevation="0"
+        large
+        color="secondary darken-1"
+        class="text-h6 font-weight-bold flex-grow-1 flex-shrink-0 flex-column"
+        style="border-radius: 14px"
+        height="70"
+      >
+        <v-card-title
+          class="pa-0 pt-1 pl-2 text-h5 font-weight-bold primary--text"
+          style="font-weight: 800 !important"
+          >2</v-card-title
+        >
+        <v-card-text
+          class="text-h6 pa-1 pt-0 font-weight-bold text-center"
+          style="margin-top: -18px"
+          ><span class="white--text">반품</span></v-card-text
+        >
+      </v-card>
     </div>
     <v-card style="overflow-x: scroll" tile elevation="0">
       <v-list class="pt-0">
@@ -47,8 +63,7 @@
                   >{{ item.name }}</v-list-item-title
                 >
                 <v-list-item-subtitle
-                  class="mt-0 text-subtitle-1 mt-0"
-                  :class="item.timecolor"
+                  class="mt-0 text-subtitle-1 mt-0 grey--text"
                 >
                   {{ item.time }}
                 </v-list-item-subtitle>
@@ -56,6 +71,7 @@
               <v-list-item-action class="ml-2">
                 <v-list-item-title
                   class="text-h6 font-weight-bold black--text align-self-end"
+                  :class="item.fontcolor"
                 >
                   {{ item.count }}
                 </v-list-item-title>
@@ -96,7 +112,9 @@
         </v-card-title>
         <v-divider></v-divider>
         <v-card-text>
-          <p class="text-center text-h6 font-weight-bold mt-2 mb-2 black--text">
+          <p
+            class="text-center text-h6 font-weight-bold mt-2 mb-2 primary--text text--darken-4"
+          >
             선택 공급사명
           </p>
           <v-text-field
@@ -104,15 +122,18 @@
             dense
             v-model="message"
             filled
+            single-line
             clear-icon="mdi-close-circle"
             clearable
             type="text"
             @click:clear="clearMessage"
-            class="brown--text mt-3"
+            class="primary--text text--darken-4 mt-3"
             background-color="primary lighten-5"
-            color="brown darken-2"
+            style="font-size: 1.25em"
+            color="primary darken-4"
           ></v-text-field>
           <div
+            class="pl-3 pr-3"
             style="
               overflow: hidden;
               overflow-y: auto;

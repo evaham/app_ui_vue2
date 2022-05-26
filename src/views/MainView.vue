@@ -17,7 +17,7 @@
       >
         <v-icon>mdi-menu</v-icon>
       </v-btn>
-      <div class="font-weight-bold flex-grow-1 text-center font-weight-bold">
+      <div class="text-h6 flex-grow-1 text-center font-weight-bold">
         {{ propsData.pagetitle }}
       </div>
       <v-btn
@@ -62,7 +62,7 @@
       </v-list>
     </v-navigation-drawer>
     <div class="pa-1" v-if="show == true">
-      <v-card class="tertiary lighten-4" elevation="0">
+      <v-card class="secondary lighten-2" elevation="0">
         <v-card-title class="pa-1">
           <span class="text-body-2">마스터 수신 시각 :</span>
           <span class="text-body-1" style="font-weight: 800"
@@ -75,7 +75,7 @@
       </v-card>
     </div>
     <div class="pa-1" v-if="show == false">
-      <v-card class="tertiary lighten-4" elevation="0">
+      <v-card class="secondary lighten-2" elevation="0">
         <p class="pa-1 mb-1 text-center">
           수신된 마스터 정보가 없습니다.<br />
           하단 버튼을 눌러 마스터 수신후, 메뉴를 이용하시길 바랍니다.
@@ -84,9 +84,11 @@
           <v-btn
             dark
             rounded
+            large
+            outlined
             @click="show = true"
-            color="primary darken-1"
-            class="ma-1 mb-2 black--text justify-center"
+            color="secondary darken-3"
+            class="ma-1 mb-2 justify-center"
             >마스터수신</v-btn
           >
         </div>
@@ -112,7 +114,7 @@
             >
             <v-card-text
               class="text-h6 pa-1 pt-0 font-weight-bold text-center"
-              style="font-size: 1.2em !important"
+              style="font-size: 1.2em !important; margin-top: -10px"
               ><span class="white--text">{{ item.name }}</span></v-card-text
             >
           </v-card>
@@ -152,49 +154,49 @@ export default {
       {
         link: "/loading",
         name: "로딩화면",
-        bg: "secondary darken-3",
+        bg: "secondary darken-2",
         color: "dark",
       },
       {
         link: "/purchaselist",
         name: "매입/반품",
-        bg: "secondary darken-2",
+        bg: "secondary darken-1",
         color: "dark",
       },
       {
         link: "/purchaseView",
         name: "매입상세",
-        bg: "secondary darken-3",
+        bg: "secondary darken-2",
         color: "dark",
       },
       {
         link: "/salegrouplist",
         name: "특매그룹",
-        bg: "secondary darken-2",
+        bg: "secondary darken-1",
         color: "dark",
       },
       {
         link: "/salegoodslist",
         name: "특매",
-        bg: "secondary darken-3",
+        bg: "secondary darken-2",
         color: "dark",
       },
       {
         link: "/salegrouplist",
         name: "특매",
-        bg: "secondary darken-2",
+        bg: "secondary darken-1",
         color: "dark",
       },
       {
         link: "/salegoodslist",
         name: "주문서",
-        bg: "secondary darken-3",
+        bg: "secondary darken-2",
         color: "dark",
       },
       {
         link: "/salegrouplist",
         name: "매대그룹",
-        bg: "secondary darken-2",
+        bg: "secondary darken-1",
         color: "dark",
       },
     ],

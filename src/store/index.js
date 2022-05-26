@@ -5,16 +5,16 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    basecolor: "primary darken-1",
+    basecolor: "primary darken-3",
     dark: false,
   },
   getters: {},
   mutations: {
     ischangecolor(state) {
-      if (state.basecolor == "primary darken-2") {
-        state.basecolor = "primary darken-3";
-      } else {
+      if (state.basecolor == "primary darken-3") {
         state.basecolor = "primary darken-2";
+      } else {
+        state.basecolor = "primary darken-3";
       }
     },
   },

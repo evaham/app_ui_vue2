@@ -2,7 +2,7 @@
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
     <div class="pa-1">
-      <v-card class="tertiary lighten-4 pa-1" elevation="0">
+      <v-card class="secondary lighten-2 pa-1" elevation="0">
         <v-list dense class="transparent pa-0">
           <v-list-item style="min-height: 24px">
             <div class="mr-9" style="min-width: 45px">공급사</div>
@@ -11,7 +11,10 @@
           <v-list-item style="min-height: 24px">
             <div class="mr-9" style="min-width: 45px">금액</div>
             <div class="">
-              <span class="font-weight-bold">12433.35</span> 원
+              <span class="font-weight-bold"
+                >12,433<span class="grey--text text--darken-1">.35</span></span
+              >
+              원
             </div>
           </v-list-item>
           <v-list-item style="min-height: 24px">
@@ -107,7 +110,7 @@
                 <v-list-item-subtitle
                   class="text-subtitle-1 font-weight-bold mb-0 black--text"
                 >
-                  {{ item.money3 }}
+                  {{ item.money3 }}<span class="white--text">.00</span>
                 </v-list-item-subtitle>
               </v-list-item-action>
             </v-list-item>
