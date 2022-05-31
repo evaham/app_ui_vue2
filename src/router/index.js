@@ -37,9 +37,9 @@ const routes = [
         component: () => import("@/views/PurchaseView.vue"),
       },
       {
-        path: "/purchaseview2",
-        name: "PurchaseView2",
-        component: () => import("@/views/PurchaseView2.vue"),
+        path: "/specialsale",
+        name: "SpecialSale",
+        component: () => import("@/views/SpecialSale.vue"),
       },
       {
         path: "/salegrouplist",
@@ -50,6 +50,16 @@ const routes = [
         path: "/salegoodslist",
         name: "SaleGoodsList",
         component: () => import("@/views/SaleGoodsList.vue"),
+      },
+      {
+        path: "/specialsalelist",
+        name: "SpecialSaleList",
+        component: () => import("@/views/SpecialSaleList.vue"),
+      },
+      {
+        path: "/goodslist",
+        name: "GoodsList",
+        component: () => import("@/views/GoodsList.vue"),
       },
     ],
   },

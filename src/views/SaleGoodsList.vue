@@ -1,8 +1,8 @@
 <template>
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
-    <div class="pa-1">
-      <v-card class="secondary lighten-2" elevation="0">
+    <div class="pt-2 pb-2">
+      <v-card class="custom__infobox" tile elevation="0">
         <v-list dense class="transparent">
           <v-list-item style="min-height: 24px">
             <div class="mr-9" style="min-width: 45px">그룹명</div>
@@ -70,10 +70,9 @@
     <v-app-bar app bottom elevation="0" class="white">
       <v-btn
         depressed
-        rounded
         large
-        color="primary darken-1 black--text"
-        class="flex-grow-1 ml-2 mr-2"
+        color="black--text"
+        class="flex-grow-1 ml-2 mr-2 custom__btn"
       >
         <span class="text-h6 font-weight-bold">상품 추가</span>
       </v-btn>

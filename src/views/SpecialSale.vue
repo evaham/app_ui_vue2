@@ -1,71 +1,62 @@
 <template>
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
-    <div class="d-flex pa-1">
-      <div class="dateselecter">
-        <v-btn
-          class="dateselecter__rbtn"
-          color="secondary darken-3"
-          elevation="0"
-        >
-          <v-icon>mdi-chevron-left</v-icon>
-        </v-btn>
-        <input type="text" value="2022년 04월" class="text-center" />
-        <v-btn
-          class="dateselecter__lbtn"
-          color="secondary darken-3"
-          elevation="0"
-        >
-          <v-icon>mdi-chevron-right</v-icon>
-        </v-btn>
-      </div>
-    </div>
-    <v-list class="pt-0">
-      <v-subheader dark class="secondary darken-3" style="height: 34px">
-        <div class="v-list-item__action mr-1"></div>
-        <div class="v-list-item__content">그룹명 (상품수)</div>
-        <div class="v-list-item__action justify-end"></div>
-      </v-subheader>
+    <v-list class="pt-2">
       <v-list-item-group>
-        <template v-for="(item, index) in items">
-          <v-list-item :key="index">
-            <v-list-item-action class="mr-2">
-              <div
-                style="
-                  display: flex;
-                  width: 24px;
-                  height: 24px;
-                  border-radius: 50%;
-                  color: #fff;
-                  justify-content: center;
-                  align-items: center;
-                  font-weight: 600;
-                "
-                :st="[item.iconcolor, item.textcolor]"
-                :class="[item.iconcolor, item.textcolor]"
-              >
-                {{ item.icontext }}
-              </div>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title class="text-h6 font-weight-bold">
-                {{ item.name }}
-                <span class="grey--text">{{ item.count }}</span>
-              </v-list-item-title>
-              <v-list-item-subtitle class="text-subtitle-1 black--text">
-                {{ item.sdate }} ~ {{ item.edate }}
-              </v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-          <v-divider v-if="index < items.length" :key="index"></v-divider>
-        </template>
+        <v-card
+          elevation="0"
+          height="100"
+          class="ml-2 mr-2 mb-2 custom__menu custom__menu--type1"
+        >
+          <v-card-title class="pa-0 pt-1 pl-2 text-h5 num">1</v-card-title>
+          <v-card-text
+            class="text-h6 pa-1 pt-0 text-center tit"
+            style="margin-top: -30px"
+            ><span class="white--text">특매 스캔</span></v-card-text
+          >
+          <v-card-text
+            class="pt-0 text-center text-subtitle-1 txt"
+            style="opacity: 0.8"
+          >
+            스캔된 상품을 PC로 전송 후 MGR에서 특매 등록.
+          </v-card-text>
+        </v-card>
+        <v-card
+          elevation="0"
+          height="100"
+          class="ml-2 mr-2 mb-2 custom__menu custom__menu--type2"
+        >
+          <v-card-title class="pa-0 pt-1 pl-2 text-h5 num">2</v-card-title>
+          <v-card-text
+            class="text-h6 pa-1 pt-0 font-weight-bold text-center"
+            style="margin-top: -25px"
+            ><span class="black--text">특매 관리</span></v-card-text
+          >
+          <v-card-text
+            class="pt-0 grey--text text--darken-2 text-center text-subtitle-1 txt"
+          >
+            앱에서 즉시 특매 상품을 추가.수정 등록
+          </v-card-text>
+        </v-card>
+        <v-card
+          elevation="0"
+          height="100"
+          class="ml-2 mr-2 mb-2 custom__menu custom__menu--type1"
+        >
+          <v-card-title class="pa-0 pt-1 pl-2 text-h5 num">3</v-card-title>
+          <v-card-text
+            class="text-h6 pa-1 pt-0 font-weight-bold text-center"
+            style="margin-top: -18px"
+            ><span class="white--text">특매 상품 검색</span></v-card-text
+          >
+          <v-card-text
+            class="pt-0 grey--text text--lighten-3 text-center text-subtitle-1 txt"
+          >
+            특매 진행중인 상품 검색
+          </v-card-text>
+        </v-card>
       </v-list-item-group>
     </v-list>
-    <v-app-bar app bottom elevation="0" class="white">
-      <v-btn depressed large class="flex-grow-1 ml-2 mr-2 custom__btn">
-        <span class="text-h6 font-weight-bold">새 특매그룹 등록</span>
-      </v-btn>
-    </v-app-bar>
   </v-main>
 </template>
 <script>
@@ -74,7 +65,7 @@ export default {
   name: "SaleGroupList",
   data: () => ({
     propsData: {
-      pagetitle: "특매그룹",
+      pagetitle: "특매",
       pageBack: true,
       pageBtn: false,
       pageBtnName: null,
@@ -107,8 +98,8 @@ export default {
         sdate: "22.02.01",
         edate: "22.05.31",
         icontext: "일",
-        textcolor: "grey--text text--darken-2",
-        iconcolor: "grey lighten-2",
+        textcolor: "grey--text text--darken-1",
+        iconcolor: "grey lighten-4",
       },
       {
         name: "적립",

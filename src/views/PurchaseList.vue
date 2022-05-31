@@ -1,23 +1,17 @@
 <template>
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
-    <div class="d-flex pa-2">
+    <div class="d-flex pa-4 pt-2 pb-2">
       <v-card
         @click="dialog3 = true"
         elevation="0"
         large
-        color="secondary darken-1"
-        class="mr-2 text-h6 font-weight-bold flex-grow-1 flex-column"
-        style="border-radius: 14px"
+        class="mr-1 text-h6 flex-grow-1 flex-column custom__menu custom__menu--type1"
         height="70"
       >
-        <v-card-title
-          class="pa-0 pt-1 pl-2 text-h5 font-weight-bold primary--text"
-          style="font-weight: 800 !important"
-          >1</v-card-title
-        >
+        <v-card-title class="pa-0 pt-1 pl-2 text-h5 num">1</v-card-title>
         <v-card-text
-          class="text-h6 pa-1 pt-0 font-weight-bold text-center"
+          class="text-h6 pa-1 pt-0 text-center"
           style="margin-top: -18px"
           ><span class="white--text">발주</span></v-card-text
         >
@@ -26,18 +20,17 @@
         @click="dialog3 = true"
         elevation="0"
         large
-        color="secondary darken-1"
-        class="text-h6 font-weight-bold flex-grow-1 flex-shrink-0 flex-column"
-        style="border-radius: 14px"
+        class="ml-1 text-h6 flex-grow-1 flex-column custom__menu custom__menu--type1"
+        style="border-radius: 8px"
         height="70"
       >
         <v-card-title
-          class="pa-0 pt-1 pl-2 text-h5 font-weight-bold primary--text"
+          class="pa-0 pt-1 pl-2 text-h5 num"
           style="font-weight: 800 !important"
           >2</v-card-title
         >
         <v-card-text
-          class="text-h6 pa-1 pt-0 font-weight-bold text-center"
+          class="text-h6 pa-1 pt-0 text-center tit"
           style="margin-top: -18px"
           ><span class="white--text">반품</span></v-card-text
         >
@@ -89,13 +82,8 @@
       </v-list>
     </v-card>
     <v-app-bar app bottom elevation="0" class="white" v-show="checkOpt">
-      <v-btn
-        rounded
-        depressed
-        large
-        color="primary darken-1 black--text text-h6 font-weight-bold"
-        class="flex-grow-1 ml-2 mr-2"
-        >전송
+      <v-btn tile depressed large class="flex-grow-1 ml-2 mr-2 custom__btn"
+        ><span class="text-h6 font-weight-bold">전송</span>
       </v-btn>
     </v-app-bar>
     <v-dialog v-model="dialog3" persistent max-width="500px">
@@ -152,22 +140,20 @@
         </v-card-text>
         <v-card-actions>
           <v-btn
-            rounded
+            tile
             large
             depressed
-            color="primary darken-1 black--text"
-            class="flex-grow-1 ml-2 mr-2"
+            class="flex-grow-1 ml-2 mr-2 custom__btn"
             @click="dialog3 = false"
           >
             <span class="text-h6 font-weight-bold">스캔</span>
           </v-btn>
           <v-btn
-            rounded
+            tile
             large
             depressed
             disabled
-            color="primary darken-1 black--text"
-            class="flex-grow-1 ml-2 mr-2"
+            class="flex-grow-1 ml-2 mr-2 custom__btn"
             @click="dialog3 = false"
           >
             <span class="text-h6 font-weight-bold">확인</span>
@@ -226,7 +212,7 @@ export default {
         name: "서울우유",
         time: "오늘 11 : 31",
         timecolor: "primary--text text--darken-4",
-        money: "5,715",
+        money: "-5,715",
         count: "20",
         fontcolor: "red--text text--darken-1",
       },
@@ -262,7 +248,7 @@ export default {
         name: "서울우유서울우유서울우유",
         time: "2022-04-20 11 : 31",
         timecolor: "grey--text",
-        money: "211,905",
+        money: "-211,905",
         count: "11",
         fontcolor: "red--text text--darken-1",
         ectmoney: ".00",

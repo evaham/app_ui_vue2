@@ -1,8 +1,8 @@
 <template>
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
-    <div class="pa-1">
-      <v-card class="secondary lighten-2 pa-1" elevation="0">
+    <div class="pt-2 pb-2">
+      <v-card class="pa-1 custom__infobox" tile elevation="0">
         <v-list dense class="transparent pa-0">
           <v-list-item style="min-height: 24px">
             <div class="mr-9" style="min-width: 45px">공급사</div>
@@ -12,7 +12,7 @@
             <div class="mr-9" style="min-width: 45px">금액</div>
             <div class="">
               <span class="font-weight-bold"
-                >12,433<span class="grey--text text--darken-1">.35</span></span
+                >12,433<span class="grey--text text--darken-2">.35</span></span
               >
               원
             </div>
@@ -29,7 +29,7 @@
         fab
         elevation="3"
         small
-        color="primary darken-1 mr-2 black--text"
+        color="mr-2 black--text custom__btn custom__btn--icon"
         style="position: absolute; top: -36px; right: 0"
         @click="showchange()"
         ><v-icon>mdi-swap-horizontal</v-icon></v-btn
@@ -122,9 +122,9 @@
     <v-app-bar app bottom elevation="0" class="white">
       <v-btn
         large
-        rounded
+        tile
         depressed
-        color="primary darken-1 black--text"
+        color="custom__btn"
         class="flex-grow-1 ml-2 mr-2"
         @click="dialog3 = true"
       >
