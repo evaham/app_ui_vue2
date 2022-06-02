@@ -12,12 +12,9 @@
           <v-card-text
             class="text-h6 pa-1 pt-0 text-center tit"
             style="margin-top: -30px"
-            ><span class="white--text">특매 스캔</span></v-card-text
+            ><span>특매 스캔</span></v-card-text
           >
-          <v-card-text
-            class="pt-0 text-center text-subtitle-1 txt"
-            style="opacity: 0.8"
-          >
+          <v-card-text class="pt-0 text-center text-subtitle-1 txt">
             스캔된 상품을 PC로 전송 후 MGR에서 특매 등록.
           </v-card-text>
         </v-card>
@@ -28,13 +25,11 @@
         >
           <v-card-title class="pa-0 pt-1 pl-2 text-h5 num">2</v-card-title>
           <v-card-text
-            class="text-h6 pa-1 pt-0 font-weight-bold text-center"
+            class="text-h6 pa-1 pt-0 text-center tit"
             style="margin-top: -25px"
-            ><span class="black--text">특매 관리</span></v-card-text
+            ><span>특매 관리</span></v-card-text
           >
-          <v-card-text
-            class="pt-0 grey--text text--darken-2 text-center text-subtitle-1 txt"
-          >
+          <v-card-text class="pt-0 text-center text-subtitle-1 txt">
             앱에서 즉시 특매 상품을 추가.수정 등록
           </v-card-text>
         </v-card>
@@ -45,13 +40,11 @@
         >
           <v-card-title class="pa-0 pt-1 pl-2 text-h5 num">3</v-card-title>
           <v-card-text
-            class="text-h6 pa-1 pt-0 font-weight-bold text-center"
+            class="text-h6 pa-1 pt-0 font-weight-bold text-center tit"
             style="margin-top: -18px"
-            ><span class="white--text">특매 상품 검색</span></v-card-text
+            ><span>특매 상품 검색</span></v-card-text
           >
-          <v-card-text
-            class="pt-0 grey--text text--lighten-3 text-center text-subtitle-1 txt"
-          >
+          <v-card-text class="pt-0 text-center text-subtitle-1 txt">
             특매 진행중인 상품 검색
           </v-card-text>
         </v-card>

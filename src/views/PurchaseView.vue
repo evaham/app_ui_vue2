@@ -53,10 +53,9 @@
                 >
                   {{ item.name }}
                 </v-list-item-title>
-                <v-list-item-subtitle
-                  class="text-subtitle-1 mb-0 black--text"
-                  >{{ item.barcode }}</v-list-item-subtitle
-                >
+                <v-list-item-subtitle class="text-subtitle-1 mb-0">{{
+                  item.barcode
+                }}</v-list-item-subtitle>
               </v-list-item-content>
               <v-list-item-action class="ml-2">
                 <v-list-item-title
@@ -65,7 +64,7 @@
                   {{ item.quantity }}
                 </v-list-item-title>
                 <v-list-item-subtitle
-                  class="text-subtitle-1 font-weight-bold mb-0 black--text"
+                  class="text-subtitle-1 font-weight-bold mb-0"
                 >
                   {{ item.money }}<span class="grey--text">.00</span>
                 </v-list-item-subtitle>
@@ -96,19 +95,18 @@
                 >
                   {{ item.name }}
                 </v-list-item-title>
-                <v-list-item-subtitle
-                  class="text-subtitle-1 mb-0 black--text"
-                  >{{ item.barcode }}</v-list-item-subtitle
-                >
+                <v-list-item-subtitle class="text-subtitle-1 mb-0">{{
+                  item.barcode
+                }}</v-list-item-subtitle>
               </v-list-item-content>
               <v-list-item-action class="ml-2">
                 <v-list-item-subtitle
-                  class="text-subtitle-1 font-weight-bold mb-0 black--text"
+                  class="text-subtitle-1 font-weight-bold mb-0"
                 >
                   {{ item.money2 }}<span class="grey--text">.00</span>
                 </v-list-item-subtitle>
                 <v-list-item-subtitle
-                  class="text-subtitle-1 font-weight-bold mb-0 black--text"
+                  class="text-subtitle-1 font-weight-bold mb-0"
                 >
                   {{ item.money3 }}<span class="white--text">.00</span>
                 </v-list-item-subtitle>
@@ -125,7 +123,7 @@
         tile
         depressed
         color="custom__btn"
-        class="flex-grow-1 ml-2 mr-2"
+        class="flex-grow-1 ml-8 mr-8"
         @click="dialog3 = true"
       >
         <span class="text-h6 font-weight-bold">상품 추가</span>

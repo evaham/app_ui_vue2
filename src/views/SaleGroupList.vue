@@ -52,7 +52,7 @@
                 {{ item.name }}
                 <span class="grey--text">{{ item.count }}</span>
               </v-list-item-title>
-              <v-list-item-subtitle class="text-subtitle-1 black--text">
+              <v-list-item-subtitle class="text-subtitle-1">
                 {{ item.sdate }} ~ {{ item.edate }}
               </v-list-item-subtitle>
             </v-list-item-content>
@@ -62,7 +62,7 @@
       </v-list-item-group>
     </v-list>
     <v-app-bar app bottom elevation="0" class="white">
-      <v-btn depressed large class="flex-grow-1 ml-2 mr-2 custom__btn">
+      <v-btn depressed large class="flex-grow-1 ml-8 mr-8 custom__btn">
         <span class="text-h6 font-weight-bold">새 특매그룹 등록</span>
       </v-btn>
     </v-app-bar>
@@ -80,90 +80,6 @@ export default {
       pageBtnName: null,
     },
     items: [
-      {
-        name: "적립",
-        count: "(6)",
-        timecolor: "purple--text",
-        sdate: "22.02.28",
-        edate: "22.05.31",
-        icontext: "최",
-        textcolor: "red--text text--darken-1",
-        iconcolor: "red lighten-4",
-      },
-      {
-        name: "적립 제외",
-        count: "(28)",
-        timecolor: "purple--text",
-        sdate: "22.02.28",
-        edate: "22.05.31",
-        icontext: "우",
-        textcolor: "blue--text text--darken-1",
-        iconcolor: "blue lighten-4",
-      },
-      {
-        name: "2월 롯데칠성",
-        count: "(6)",
-        timecolor: "grey--text",
-        sdate: "22.02.01",
-        edate: "22.05.31",
-        icontext: "일",
-        textcolor: "grey--text text--darken-2",
-        iconcolor: "grey lighten-2",
-      },
-      {
-        name: "적립",
-        count: "(6)",
-        timecolor: "purple--text",
-        sdate: "22.02.28",
-        edate: "22.05.31",
-        icontext: "최",
-        iconcolor: "red lighten-1",
-      },
-      {
-        name: "적립 제외",
-        count: "(28)",
-        timecolor: "purple--text",
-        sdate: "22.02.28",
-        edate: "22.05.31",
-        icontext: "우",
-        iconcolor: "blue lighten-1",
-      },
-      {
-        name: "2월 롯데칠성",
-        count: "(6)",
-        timecolor: "grey--text",
-        sdate: "22.02.01",
-        edate: "22.05.31",
-        icontext: "일",
-        iconcolor: "grey lighten-1",
-      },
-      {
-        name: "적립",
-        count: "(120)",
-        timecolor: "purple--text",
-        sdate: "22.02.28",
-        edate: "22.05.31",
-        icontext: "최",
-        iconcolor: "red lighten-2",
-      },
-      {
-        name: "적립 제외",
-        count: "(7)",
-        timecolor: "purple--text",
-        sdate: "22.02.28",
-        edate: "22.05.31",
-        icontext: "우",
-        iconcolor: "blue lighten-2",
-      },
-      {
-        name: "2월 롯데칠성",
-        count: "(6)",
-        timecolor: "grey--text",
-        sdate: "22.02.01",
-        edate: "22.05.31",
-        icontext: "일",
-        iconcolor: "grey lighten-2",
-      },
       {
         name: "적립",
         count: "(6)",
@@ -189,7 +105,7 @@ export default {
         sdate: "22.02.01",
         edate: "22.05.31",
         icontext: "일",
-        iconcolor: "grey lighten-3",
+        iconcolor: "grey lighten-1",
       },
     ],
   }),

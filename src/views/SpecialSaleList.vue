@@ -105,7 +105,7 @@
             </v-list-item>
           </v-list>
         </div>
-        <div class="custom__infobox">
+        <div class="grey lighten-4">
           <v-list dense class="transparent pa-0 pt-2 pb-2">
             <v-list-item class="pa-2 pt-0 pb-0" style="min-height: 24px">
               <div class="mr-3" style="min-width: 76px">특매매입가</div>

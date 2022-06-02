@@ -1,26 +1,26 @@
 <template>
   <v-main>
     <header-nav :propsData="this.propsData"></header-nav>
-    <div class="d-flex pa-4 pt-2 pb-2">
+    <div class="d-flex pa-4 pt-4 pb-4">
       <v-card
         @click="dialog3 = true"
         elevation="0"
         large
-        class="mr-1 text-h6 flex-grow-1 flex-column custom__menu custom__menu--type1"
+        class="mr-1 flex-grow-1 flex-column custom__menu custom__menu--type1"
         height="70"
       >
         <v-card-title class="pa-0 pt-1 pl-2 text-h5 num">1</v-card-title>
         <v-card-text
-          class="text-h6 pa-1 pt-0 text-center"
+          class="text-h6 pa-1 pt-0 text-center tit"
           style="margin-top: -18px"
-          ><span class="white--text">발주</span></v-card-text
+          ><span>발주</span></v-card-text
         >
       </v-card>
       <v-card
         @click="dialog3 = true"
         elevation="0"
         large
-        class="ml-1 text-h6 flex-grow-1 flex-column custom__menu custom__menu--type1"
+        class="ml-1 flex-grow-1 flex-column custom__menu custom__menu--type2"
         style="border-radius: 8px"
         height="70"
       >
@@ -32,11 +32,11 @@
         <v-card-text
           class="text-h6 pa-1 pt-0 text-center tit"
           style="margin-top: -18px"
-          ><span class="white--text">반품</span></v-card-text
+          ><span>반품</span></v-card-text
         >
       </v-card>
     </div>
-    <v-card style="overflow-x: scroll" tile elevation="0">
+    <v-card tile elevation="0">
       <v-list class="pt-0">
         <v-subheader dark class="secondary darken-3" style="height: 34px">
           <div class="v-list-item__action mr-1">No.</div>
@@ -63,13 +63,13 @@
               </v-list-item-content>
               <v-list-item-action class="ml-2">
                 <v-list-item-title
-                  class="text-h6 font-weight-bold black--text align-self-end"
+                  class="text-h6 font-weight-bold align-self-end"
                   :class="item.fontcolor"
                 >
                   {{ item.count }}
                 </v-list-item-title>
                 <v-list-item-subtitle
-                  class="mt-0 text-subtitle-1 font-weight-bold mt-0 black--text"
+                  class="mt-0 text-subtitle-1 font-weight-bold mt-0"
                   :class="item.fontcolor"
                 >
                   {{ item.money }}
@@ -82,7 +82,7 @@
       </v-list>
     </v-card>
     <v-app-bar app bottom elevation="0" class="white" v-show="checkOpt">
-      <v-btn tile depressed large class="flex-grow-1 ml-2 mr-2 custom__btn"
+      <v-btn tile depressed large class="flex-grow-1 ml-8 mr-8 custom__btn"
         ><span class="text-h6 font-weight-bold">전송</span>
       </v-btn>
     </v-app-bar>
@@ -213,7 +213,7 @@ export default {
         time: "오늘 11 : 31",
         timecolor: "primary--text text--darken-4",
         money: "-5,715",
-        count: "20",
+        count: "-20",
         fontcolor: "red--text text--darken-1",
       },
       {
@@ -249,7 +249,7 @@ export default {
         time: "2022-04-20 11 : 31",
         timecolor: "grey--text",
         money: "-211,905",
-        count: "11",
+        count: "-11",
         fontcolor: "red--text text--darken-1",
         ectmoney: ".00",
       },

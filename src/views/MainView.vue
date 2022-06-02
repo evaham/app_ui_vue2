@@ -17,7 +17,9 @@
       >
         <v-icon>mdi-menu</v-icon>
       </v-btn>
-      <div class="text-h6 flex-grow-1 text-center font-weight-bold">
+      <div
+        class="text-h6 flex-grow-1 text-center font-weight-bold custom__pagetit"
+      >
         {{ propsData.pagetitle }}
       </div>
       <v-btn
@@ -120,7 +122,7 @@
         depressed
         large
         color="custom__btn"
-        class="flex-grow-1 ml-2 mr-2"
+        class="flex-grow-1 ml-8 mr-8"
         style="border-radius: 8px"
       >
         <span class="text-h6 font-weight-bold">전송대기 : 4</span>

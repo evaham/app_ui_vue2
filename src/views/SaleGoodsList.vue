@@ -18,7 +18,7 @@
                 align-items: center;
                 font-weight: 600;
               "
-              class="red ml-2"
+              class="red lighten-3 ml-2"
             >
               최
             </div>
@@ -47,7 +47,7 @@
                 <v-list-item-title class="text-h6 font-weight-bold">
                   {{ item.name }}
                 </v-list-item-title>
-                <v-list-item-subtitle class="text-subtitle-1 black--text">{{
+                <v-list-item-subtitle class="text-subtitle-1">{{
                   item.barcode
                 }}</v-list-item-subtitle>
               </v-list-item-content>
@@ -72,7 +72,7 @@
         depressed
         large
         color="black--text"
-        class="flex-grow-1 ml-2 mr-2 custom__btn"
+        class="flex-grow-1 ml-8 mr-8 custom__btn"
       >
         <span class="text-h6 font-weight-bold">상품 추가</span>
       </v-btn>

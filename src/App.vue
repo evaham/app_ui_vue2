@@ -18,7 +18,7 @@ export default {
   &__btn {
     background-color: #f7bc29 !important;
     border-radius: 8px !important;
-    color: #000 !important;
+    color: rgba(0, 0, 0, 0.75) !important;
     &--icon {
       border-radius: 50% !important;
     }
@@ -39,25 +39,29 @@ export default {
       line-height: 1.2 !important;
     }
     &--type1 {
-      background: #868686 !important;
+      background: rgba(0, 0, 0, 0.55) !important;
       color: #fff;
       .num {
-        color: #fbc02d !important;
+        color: rgba(248, 183, 22, 0.9) !important;
       }
-      .tit,
+      .tit {
+        color: rgba(255, 255, 255, 0.9) !important;
+      }
       .txt {
-        color: #fff !important;
+        color: rgba(255, 255, 255, 0.6) !important;
       }
     }
     &--type2 {
-      background: #d9d9d9 !important;
+      background: rgba(0, 0, 0, 0.43) !important;
       color: #fff;
       .num {
-        color: #ef6c00 !important;
+        color: rgba(248, 183, 22, 1) !important;
       }
-      .tit,
+      .tit {
+        color: rgba(255, 255, 255, 1) !important;
+      }
       .txt {
-        color: #303030 !important;
+        color: rgba(255, 255, 255, 0.7) !important;
       }
     }
   }
@@ -104,5 +108,14 @@ export default {
       }
     }
   }
+  &__pagetit {
+    color: rgba(80, 37, 5, 0.8);
+  }
+}
+.v-list-item__title {
+  color: rgba(0, 0, 0, 0.75) !important;
+}
+.v-list-item__subtitle {
+  color: rgba(0, 0, 0, 0.75) !important;
 }
 </style>
