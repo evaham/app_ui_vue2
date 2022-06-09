@@ -1,5 +1,12 @@
 <template>
   <v-app>
+    <v-system-bar height="28" app dark class="custom__systemcolor">
+      <v-spacer></v-spacer>
+      <v-icon>mdi-wifi-strength-4</v-icon>
+      <v-icon>mdi-signal-cellular-outline</v-icon>
+      <v-icon>mdi-battery</v-icon>
+      <span>12:30</span>
+    </v-system-bar>
     <router-view />
   </v-app>
 </template>
@@ -110,6 +117,12 @@ export default {
   }
   &__pagetit {
     color: rgba(80, 37, 5, 0.8);
+  }
+  &__headcolor {
+    background: #f0af46;
+  }
+  &__systemcolor {
+    background: #f4a246 !important;
   }
 }
 .v-list-item__title {

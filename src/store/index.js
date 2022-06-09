@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    basecolor: "primary darken-3",
+    basecolor: "rgb(240,176,74)",
     dark: false,
   },
   getters: {},

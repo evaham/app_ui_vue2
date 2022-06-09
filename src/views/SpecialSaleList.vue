@@ -65,7 +65,7 @@
     </v-app-bar>
     <v-dialog v-model="dialog3" persistent>
       <v-card>
-        <v-card-title class="pa-2" :class="basecolor">
+        <v-card-title class="pa-2 custom__headcolor" :class="basecolor">
           <span class="font-weight-bold flex-grow-1 text-center">특매정보</span>
           <v-btn
             icon

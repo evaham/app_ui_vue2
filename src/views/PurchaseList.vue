@@ -88,7 +88,7 @@
     </v-app-bar>
     <v-dialog v-model="dialog3" persistent max-width="500px">
       <v-card>
-        <v-card-title class="pa-2" :class="basecolor">
+        <v-card-title class="pa-2 custom__headcolor" :class="basecolor">
           <span class="font-weight-bold flex-grow-1 text-center">공급사</span>
           <v-btn
             icon
